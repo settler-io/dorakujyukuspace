@@ -1,0 +1,117 @@
+// ******************************
+// mixin.scss
+// ******************************
+// ******************************
+// breakpoint
+// ******************************
+@mixin mq($bp) {
+  @media #{map-get($breakpoint, $bp)} {
+    @content;
+  }
+}
+
+// ******************************
+// flex
+// ******************************
+@mixin flex-all($j: space-between, $a: center) {
+  display: flex;
+  justify-content: $j;
+  align-items: $a;
+  @content;
+}
+
+@mixin flex-md($j: space-between, $a: center) {
+  @include mq(md) {
+    display: flex;
+    justify-content: $j;
+    align-items: $a;
+    @content;
+  }
+}
+
+// ******************************
+// position
+// ******************************
+@mixin ab($t: null, $l: null, $b: null, $r: null) {
+  position: absolute;
+
+  @if $t !=null {
+    @if $t ==50% {
+      top: $t;
+      transform: translateY(-50%);
+    } @else {
+      top: $t;
+    }
+  }
+
+  @if $r !=null {
+    right: $r;
+  }
+
+  @if $b !=null {
+    bottom: $b;
+  }
+
+  @if $l !=null {
+    @if $l ==50% {
+      left: $l;
+      transform: translateX(-50%);
+    } @else {
+      left: $l;
+    }
+  }
+}
+
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// ******************************
+// font-family
+// ******************************
+@mixin sans-serif($weight: 500) {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: $weight;
+}
+
+@mixin serif($weight: 500) {
+  font-family: "Noto Serif JP", serif;
+  font-weight: $weight;
+}
+
+// ******************************
+// font-size
+// ******************************
+@function font_vw_pc($fz) {
+  @return calc($fz/$PC-width * 100vw);
+}
+
+@mixin pcFont($fz: 16, $bp: "md") {
+  @include mq($bp) {
+    font-size: min(font_vw_pc($fz), $fz * 1px);
+  }
+}
+
+@function font_vw_sp($fz) {
+  @return calc($fz/$SP-width * 100vw);
+}
+
+@mixin spFont($fz: 16, $bp: "sm-md") {
+  @include mq($bp) {
+    font-size: font_vw_sp($fz);
+  }
+}
+
+// ******************************
+// width
+// ******************************
+@function pcWidth($pixel) {
+  @return calc($pixel/$PC-inner * 100%);
+}
+
+@function spWidth($pixel) {
+  @return calc($pixel/($SP-inner * $SP-width/100) * 100%);
+}

@@ -1,0 +1,18 @@
+/******************************
+display.scss
+******************************/
+.pc-only {
+  display: none;
+
+  @include mq(md) {
+    display: block;
+  }
+}
+
+.sp-only {
+  display: none;
+
+  @include mq(sm-md) {
+    display: block;
+  }
+}

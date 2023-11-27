@@ -1,0 +1,274 @@
+/******************************
+l-main.scss
+******************************/
+.l-MV {
+  padding-top: pcWidth(40);
+
+  &__contents {
+    @include flex-md;
+  }
+
+  &__txt {
+    flex: 0 1 70%;
+  }
+
+  &__figure {
+    overflow-y: hidden;
+    margin-right: pcWidth(30);
+
+    @include mq(md) {
+      flex: 0 1 pcWidth(345);
+      aspect-ratio: 345/605;
+    }
+
+    @include mq(sm-md) {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      aspect-ratio: 286/367;
+    }
+  }
+
+  &__text {
+    @include mq(md) {
+      margin: pcWidth(50) 0 pcWidth(100);
+    }
+
+    @include mq(sm-md) {
+      margin: spWidth(30) auto;
+    }
+  }
+
+  &__button {
+    @include mq(md) {
+      width: 57%;
+    }
+
+    @include mq(sm-md) {
+      width: 100%;
+      margin-bottom: spWidth(50);
+    }
+  }
+}
+
+.l-image {
+  @include mq(md) {
+    padding: pcWidth(30) 0 pcWidth(80);
+  }
+
+  @include mq(sm-md) {
+    padding: spWidth(30) 0 spWidth(72);
+  }
+
+  &__list {
+    @include flex-md;
+  }
+
+  &__item {
+    position: relative;
+    flex: 0 1 30%;
+
+    @include mq(sm-md) {
+      &:not(:last-of-type) {
+        margin-bottom: spWidth(60);
+      }
+    }
+  }
+}
+
+.l-merit {
+  @include mq(md) {
+    padding: pcWidth(40) 0 pcWidth(72);
+  }
+
+  @include mq(sm-md) {
+    padding: spWidth(30) 0 spWidth(100);
+  }
+
+  &__item {
+    @include flex-md($a: flex-start);
+
+    &:nth-of-type(odd) {
+      flex-direction: row-reverse;
+    }
+
+    @include mq(md) {
+      margin-bottom: pcWidth(40);
+    }
+
+    @include mq(sm-md) {
+      &:not(:last-of-type) {
+        margin-bottom: spWidth(75);
+      }
+    }
+  }
+
+  &__figure {
+    flex: 0 1 58%;
+  }
+
+  &__txt {
+    flex: 0 1 50%;
+  }
+}
+
+.l-about {
+  @include mq(md) {
+    padding: pcWidth(40) 0 pcWidth(64);
+  }
+
+  @include mq(sm-md) {
+    padding: spWidth(30) 0 spWidth(50);
+  }
+
+  &__image {
+    @include mq(md) {
+      margin-bottom: pcWidth(54);
+    }
+
+    @include mq(sm-md) {
+      margin-bottom: spWidth(54);
+    }
+  }
+
+  &__item {
+    @include flex-md;
+    gap: pcWidth(65);
+
+    @include mq(md) {
+      margin-bottom: pcWidth(30);
+      padding: pcWidth(75) pcWidth(100);
+    }
+
+    @include mq(sm-md) {
+      padding: spWidth(36) spWidth(15);
+
+      &:not(:last-of-type) {
+        margin-bottom: spWidth(25);
+      }
+    }
+  }
+
+  &__figure {
+    flex: 0 1 30%;
+
+    @include mq(sm-md) {
+      width: 55%;
+      margin: 0 auto spWidth(30);
+    }
+  }
+
+  &__txt {
+    flex: 0 1 65%;
+  }
+}
+
+.l-campaign {
+  position: relative;
+  @include mq(md) {
+    padding: pcWidth(54) 0 pcWidth(84);
+  }
+
+  @include mq(sm-md) {
+    padding: spWidth(45) 0 spWidth(350);
+  }
+
+  &__h2 {
+    @include mq(md) {
+      width: 62%;
+      margin: 0 auto pcWidth(62);
+      padding: pcWidth(13) 0 pcWidth(56);
+    }
+
+    @include mq(sm-md) {
+      width: 100%;
+      padding: spWidth(6) 0 spWidth(26);
+    }
+  }
+
+  &__catch {
+    @include mq(md) {
+      margin-bottom: pcWidth(60);
+    }
+
+    @include mq(sm-md) {
+      margin-bottom: spWidth(33);
+    }
+  }
+  &__text {
+    @include mq(md) {
+      margin-bottom: pcWidth(60);
+    }
+
+    @include mq(sm-md) {
+      margin-bottom: spWidth(33);
+    }
+  }
+
+  &__button {
+    @include mq(md) {
+      width: pcWidth(510);
+      margin: 0 auto;
+    }
+
+    @include mq(sm-md) {
+      width: 100%;
+    }
+  }
+}
+
+.l-contact {
+  @include mq(md) {
+    padding: pcWidth(40) 0 pcWidth(67);
+  }
+
+  @include mq(sm-md) {
+    padding: spWidth(30) 0 spWidth(60);
+  }
+
+  &__text {
+    @include mq(md) {
+      margin-bottom: pcWidth(30);
+    }
+
+    @include mq(sm-md) {
+      margin-bottom: spWidth(52);
+    }
+  }
+  &__mail {
+    a {
+      position: relative;
+
+      @include mq(md) {
+        width: pcWidth(414);
+        padding: 0 pcWidth(64) 0 pcWidth(134);
+        margin: 0 auto pcWidth(73);
+      }
+
+      @include mq(sm-md) {
+        width: spWidth(272);
+        padding: 0 spWidth(62) 0 spWidth(84);
+        margin: 0 auto spWidth(53);
+      }
+    }
+  }
+  &__text2 {
+    @include mq(md) {
+      margin-bottom: pcWidth(72);
+    }
+
+    @include mq(sm-md) {
+      margin-bottom: spWidth(52);
+    }
+  }
+  &__button {
+    @include mq(md) {
+      width: pcWidth(510);
+      margin: 0 auto;
+    }
+
+    @include mq(sm-md) {
+      width: 100%;
+    }
+  }
+}

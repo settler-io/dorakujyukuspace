@@ -1,0 +1,61 @@
+/******************************
+base.scss
+******************************/
+
+html {
+  font-size: 12px;
+
+  @include mq(sm) {
+    font-size: 13px;
+  }
+
+  @include mq(md) {
+    font-size: 14px;
+  }
+
+  @include mq(lg) {
+    font-size: 15px;
+  }
+
+  @include mq(xl) {
+    font-size: 16px;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  color: $c-black;
+  @include sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+p {
+  line-height: 1.6;
+  font-feature-settings: "palt";
+  @include pcFont(16);
+  @include spFont(14);
+}
+
+a {
+  display: block;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+blockquote {
+  background-color: rgba($c-gray, $alpha: 0.5);
+  border-radius: 1rem;
+  padding: 1em;
+  margin-bottom: 1rem;
+}
+
+:focus {
+  outline: none;
+}

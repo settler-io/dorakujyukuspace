@@ -1,0 +1,227 @@
+/******************************
+main.scss
+******************************/
+.p-MV {
+  background-color: #f3f3f3;
+
+  &__h1 {
+    color: $c-point;
+    @include pcFont(49);
+    @include spFont(21);
+    font-weight: 700;
+    font-feature-settings: "palt";
+    letter-spacing: 0.05em;
+  }
+
+  &__button {
+    @include pcFont(37);
+    @include spFont(22);
+  }
+
+  &__img {
+    object-fit: cover;
+  }
+
+  &__text {
+    @include pcFont(30);
+    @include spFont(14);
+    letter-spacing: 0.05em;
+  }
+}
+
+.p-image {
+  background-color: #fffbfb;
+  &__h3 {
+    @include pcFont(30);
+    @include spFont(16);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: pcWidth(100);
+
+    span {
+      color: #fe8383;
+    }
+  }
+
+  &__item {
+    &::before {
+      display: block;
+      content: attr(data-number);
+      line-height: 1;
+      background-color: #fe8383;
+      border-radius: 50%;
+      color: $c-white;
+      @include flex-all($j: center);
+      @include pcFont(38);
+      @include spFont(38);
+
+      @include mq(md) {
+        width: 2em;
+        height: 2em;
+        @include ab($t: -1em, $l: -0.5em);
+      }
+      @include mq(sm-md) {
+        width: 1.2em;
+        height: 1.2em;
+        @include ab($t: -0.5em, $l: -0.25em);
+      }
+    }
+  }
+}
+.p-merit {
+  &__no {
+    color: #fe8383;
+    @include pcFont(30);
+    @include spFont(30);
+    margin-bottom: pcWidth(20);
+
+    @include mq(sm-md) {
+      text-align: center;
+    }
+  }
+  &__title {
+    @include pcFont(30);
+    @include spFont(16);
+    font-weight: 700;
+
+    @include mq(md) {
+      margin-bottom: pcWidth(30);
+    }
+
+    @include mq(sm-md) {
+      text-align: center;
+      margin-bottom: spWidth(38);
+    }
+  }
+  &__text {
+    @include pcFont(16);
+    @include spFont(14);
+  }
+}
+
+.p-about {
+  &__item {
+    background-color: #fff5f5;
+    border-radius: 2.4rem;
+  }
+  &__title {
+    font-weight: 700;
+    margin-bottom: pcWidth(37);
+    @include pcFont(30);
+    @include spFont(16);
+
+    @include mq(sm-md) {
+      text-align: center;
+    }
+  }
+  &__text {
+    @include pcFont(18);
+    @include spFont(14);
+  }
+}
+
+.p-campaign {
+  background-color: #c9eafc;
+
+  &::before {
+    display: block;
+    content: "";
+    height: 0;
+    background: url("../images/campaign_icon.png") no-repeat top/contain;
+    @include mq(md) {
+      width: 30%;
+      padding-bottom: calc(30% / 431 * 363);
+      @include ab($t: 19%, $r: 74%);
+    }
+    @include mq(sm-md) {
+      width: spWidth(412);
+      padding-bottom: calc(spWidth(412) / 431 * 363);
+      @include ab($b: 0, $r: 5%);
+    }
+    @include mq(xl) {
+      width: 431px;
+      padding-bottom: 363px;
+      right: 70%;
+    }
+  }
+
+  &__h2 {
+    color: $c-white;
+    line-height: 1.6;
+    text-align: center;
+    background: url("../images/campaign_heading.png") no-repeat top/contain;
+    @include pcFont(49);
+    @include spFont(22);
+  }
+  &__catch {
+    text-align: center;
+    font-weight: 700;
+    color: #ff5656;
+    @include pcFont(50);
+    @include spFont(18);
+  }
+  &__text {
+    text-align: center;
+    @include pcFont(35);
+    @include spFont(16);
+
+    span {
+      color: #fb7800;
+    }
+  }
+  &__button {
+    @include pcFont(37);
+    @include spFont(22);
+  }
+}
+.p-contact {
+  &__text {
+    @include pcFont(30);
+    @include spFont(16);
+
+    span {
+      color: #ff5757;
+    }
+
+    @include mq(sm-md) {
+      text-align: center;
+    }
+  }
+
+  &__mail {
+    a {
+      line-height: 5;
+      @include pcFont(18);
+      @include spFont(11);
+
+      &::before {
+        display: block;
+        content: "";
+        width: 3em;
+        height: 3em;
+        background: url(../images/contact_icon.png) no-repeat top/contain;
+        @include ab($t: 50%, $l: 15%);
+      }
+      &::after {
+        display: block;
+        content: "";
+        width: 100%;
+        height: 5em;
+        pointer-events: none;
+        background: rgba(240, 216, 153, 0.59);
+        @include ab($t: 0, $l: 0);
+      }
+    }
+  }
+
+  &__text2 {
+    text-align: center;
+    @include pcFont(18);
+    @include spFont(13);
+  }
+
+  &__button {
+    @include pcFont(37);
+    @include spFont(22);
+  }
+}

@@ -1,0 +1,25 @@
+/******************************
+footer.scss
+******************************/
+.p-footer {
+  background-color: #dbdbdb;
+
+  &__item {
+    @include pcFont(18);
+    @include spFont(18);
+    @include mq(md) {
+      &:not(:last-of-type) {
+        border-right: 1px solid $c-black;
+      }
+    }
+    @include mq(sm-md) {
+      margin-bottom: spWidth(20);
+    }
+  }
+
+  &__copy {
+    text-align: center;
+    @include pcFont(18);
+    @include spFont(18);
+  }
+}

@@ -1,0 +1,31 @@
+/******************************
+heading.scss
+******************************/
+.c-hd-lv2 {
+  position: relative;
+  text-align: center;
+  font-weight: 700;
+  @include pcFont(49);
+  @include spFont(20);
+  @include mq(md) {
+    margin-bottom: pcWidth(130);
+  }
+  @include mq(sm-md) {
+    margin-bottom: spWidth(82);
+  }
+
+  &::after {
+    display: block;
+    content: "";
+    width: 188px;
+    height: 10px;
+    background-color: #fccbcb;
+
+    @include mq(md) {
+      @include ab($t: calc(100% + 30px), $l: 50%);
+    }
+    @include mq(sm-md) {
+      @include ab($t: calc(100% + 20px), $l: 50%);
+    }
+  }
+}

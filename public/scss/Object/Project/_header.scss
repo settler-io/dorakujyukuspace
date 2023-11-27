@@ -1,0 +1,42 @@
+/******************************
+header.scss
+******************************/
+.p-header {
+  background-color: #ededed;
+
+  &-nav {
+    &__list {
+      font-weight: 700;
+      @include pcFont(16);
+      @include mq(sm-md) {
+        font-size: 16px;
+      }
+    }
+    &__item {
+      @include mq(sm-md) {
+        line-height: 3;
+        border-bottom: 1px solid #000000;
+      }
+    }
+  }
+  &__button {
+    @include pcFont(16);
+    @include spFont(22);
+  }
+}
+
+.p-hamburger {
+  @include mq(sm-md) {
+    cursor: pointer;
+  }
+
+  &__bg {
+    background-color: #333333;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+
+    &.is-active {
+      opacity: 0.6;
+    }
+  }
+}

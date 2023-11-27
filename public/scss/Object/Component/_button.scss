@@ -1,0 +1,19 @@
+/******************************
+button.scss
+******************************/
+.c-button {
+  display: block;
+  margin: 0 auto;
+  line-height: 2.5;
+  background-color: #005be1;
+  color: $c-white;
+  text-align: center;
+  font-weight: 700;
+
+  @include mq(md) {
+    border-radius: 0.5em;
+  }
+  @include mq(sm-md) {
+    border-radius: 1em;
+  }
+}

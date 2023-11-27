@@ -1,0 +1,27 @@
+/******************************
+l-footer.scss
+******************************/
+.l-footer {
+  @include mq(md) {
+    padding: pcWidth(34) 0 pcWidth(25);
+  }
+
+  @include mq(sm-md) {
+    padding: spWidth(42) 0 spWidth(17);
+  }
+  &__nav {
+    @include mq(md) {
+      margin-bottom: pcWidth(17);
+    }
+
+    @include mq(sm-md) {
+      margin-bottom: spWidth(90);
+    }
+  }
+  &__list {
+    @include flex-md($j: center);
+  }
+  &__item {
+    padding: 0 1em;
+  }
+}
