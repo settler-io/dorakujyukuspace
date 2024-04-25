@@ -160,17 +160,27 @@ contents
 }
 
 .shop{
-  width: 90%;
+  width: 95%;
   margin: auto;
   text-align: center;
+  word-break: keep-all;
+  line-height: 1em;
+
+  .image_3d{
+    flex-wrap: wrap;
   display: flex;
-  column-gap: 1em;
+  justify-content: center;
+  column-gap: 1vw;
+  }
 
   .image_3d img{
     border: solid 1px #FBBF66;
   }
 }
 
+.caption_1{
+  @include caption_1;
+}
 
 .map_waku{
   max-width: 1000px;

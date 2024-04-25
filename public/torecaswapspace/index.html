@@ -75,53 +75,36 @@
     </noscript>
 
     <div class="wrapper">
-    <header>
-      <div class="logo l-header__inner p-header__inner c-inner">
-        <div>
-            <img style="width: 100%;" src="../images/logo.svg" alt="" />
-        </div>
-        <!-- <div class="l-header-nav p-header-nav">
-          <div id="hamburger-button" class="l-hamburger p-hamburger sp-only">
-            <span class="l-hamburger__line p-hamburger__line"></span>
-            <span class="l-hamburger__line p-hamburger__line"></span>
-            <span class="l-hamburger__line p-hamburger__line"></span>
-          </div> -->
-          <nav id="header-nav">
-            <ul>
-              <li class="x_logo">
-                <a href="https://twitter.com/torecaswapspace"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><img src="images/x_logo.svg"></a
-                >
-              </li>
 
-              <li>
-                <a href="https://app.torecaswap.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >フリマ</a
-                >
-              </li>
-              <li>
-                <a href="https://support.settler.cc/hc/ja/categories/8291866436879-%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >お知らせ</a
-                >
-              </li>
-              <li>
-                <a href="https://support.settler.cc/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >お問合せ</a
-                >
-              </li>
-            </ul>
-          </nav>
-        </div>
-        
+    <header class="c-header c-hamburger-menu"><!-- 追記 クラスを追記 -->
+      <a href="#" class="c-header__logo"><img style="width: 100%;" src="images/logo.svg" alt="" /></a>
+
+      <input type="checkbox" name="hamburger" id="hamburger" class="c-hamburger-menu__input"/><!-- 追記 idはlabelのforと同じにする -->
+      <label for="hamburger" class="c-hamburger-menu__bg"></label><!-- 追記 ハンバーガーメニュを開いた時の背景 -->
+      <ul class="c-header__list c-hamburger-menu__list"><!-- 追記 クラスを追記 -->
+        <li class="c-header__list-item x_logo">
+          <a href="https://twitter.com/torecaswapspace" class="c-header__list-link" target="_blank" rel="noopener noreferrer"><img src="images/x_logo.svg" alt="トレカスワップスペース X"></a>
+        </li>
+        <li class="c-header__list-item">
+          <a href="https://app.torecaswap.com/" class="c-header__list-link" target="_blank" rel="noopener noreferrer">フリマ</a>
+        </li>
+        <li class="c-header__list-item">
+          <a href="https://support.settler.cc/hc/ja/categories/8291866436879-%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" target="_blank" class="c-header__list-link" rel="noopener noreferrer">お知らせ</a>
+        </li>
+        <li class="c-header__list-item">
+          <a href="https://support.settler.cc/" class="c-header__list-link" target="_blank" rel="noopener noreferrer">お問合せ</a>
+        </li>
+
+      </ul>
+      <label for="hamburger" class="c-hamburger-menu__button"><!-- 追記 ハンバーガーメニューのボタン -->
+        <span class="c-hamburger-menu__button-mark"></span>
+        <span class="c-hamburger-menu__button-mark"></span>
+        <span class="c-hamburger-menu__button-mark"></span>
+      </label>
     </header>
+
+
+
 
     <div id="hamburger-bg" class="l-hamburger__bg p-hamburger__bg"></div>
 
@@ -142,7 +125,7 @@
     
   <!-- イベント event -->
     <section class="category">
-      <div class="category__title"><img src="../images/squre3.svg">イベント<img src="../images/squre3.svg"></div>
+      <div class="category__title"><img src="images/squre3.svg">イベント<img src="images/squre3.svg"></div>
       <div class="category__waku">
         <p>※貸切イベント状況など</p>
         <p>
@@ -154,7 +137,7 @@
     </section>
   <!-- 料金 price -->
     <section class="category">
-      <div class="category__title"><img src="../images/squre3.svg">料 金<img src="../images/squre3.svg"></div>
+      <div class="category__title"><img src="images/squre3.svg">料 金<img src="images/squre3.svg"></div>
       <div class="category__waku">
         <p>1人でご利用の場合：1時間 1人あたり800円<br>
           2人以上でご利用の場合： 1時間 1人あたり500円</p>
@@ -172,21 +155,26 @@
   </section>
 
     <section>
-      <div class="category_m">店舗イメージ ※実際とは異なる箇所があります。</div>
-      <p class="shop">
-      <span class="image_3d">
-        <a href="../images/shop1.jpg" data-lightbox="group"><img src="../images/shop1.jpg" alt="" width="200"></a>
+      
+      <div class="shop">
+        <div style="padding-bottom: 1vh;">店舗イメージ<br><span class="caption_1"> ※実際とは異なる箇所があります。</span></div>
+        <div class="image_3d">
+      <span>
+        <a href="images/shop1.jpg" data-lightbox="group"><img src="images/shop1.jpg" alt="" width="200"></a>
       </span>
       <span class="image_3d">
-        <a href="../images/shop2.jpg" data-lightbox="group"><img src="../images/shop2.jpg" alt="" width="200"></a>
+        <a href="images/shop2.jpg" data-lightbox="group"><img src="images/shop2.jpg" alt="" width="200"></a>
       </span>
       <span class="image_3d">
-        <a href="../images/shop3.jpg" data-lightbox="group"><img src="../images/shop3.jpg" alt="" width="200"></a>
+        <a href="images/shop3.jpg" data-lightbox="group"><img src="images/shop3.jpg" alt="" width="200"></a>
       </span>
       <span class="image_3d">
-        <a href="../images/shop4.jpg" data-lightbox="group"><img src="../images/shop4.jpg" alt="" width="200"></a>
-      </span>  
-      </p>
+        <a href="images/shop4.jpg" data-lightbox="group"><img src="images/shop4.jpg" alt="" width="200"></a>
+      </span>
+      
+      </div>
+
+      </div>
 
     </section>
     
@@ -194,7 +182,7 @@
 
   <!-- 地図 MAP -->
     <section class="category">
-      <div class="category__title"><img src="../images/squre3.svg">M A P<img src="../images/squre3.svg"></div>
+      <div class="category__title"><img src="images/squre3.svg">M A P<img src="images/squre3.svg"></div>
       <div class="map_waku">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.057637526466!2d139.77395241111128!3d35.70019922881789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ea63c2e42e1%3A0x99b8599ddf32c7da!2z44CSMTAxLTAwMjQg5p2x5Lqs6YO95Y2D5Luj55Sw5Yy656We55Sw5ZKM5rOJ55S677yR4oiS77yT4oiS77yR77yTIEnjg7tU56eL6JGJ5Y6f44OT44Or!5e0!3m2!1sja!2sjp!4v1713923880785!5m2!1sja!2sjp"
         width="100%" height="450px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
@@ -210,7 +198,7 @@
       
         <li>
           <a href="https://docs.settler.cc/torecaswap/terms_of_service.pdf" target="_blank" rel="noopener noreferrer">
-          利用規約</a>
+          利用規約(PDF)</a>
         </li>
         <li>|</li>
         <li><a target="_blank" href="https://docs.settler.cc/torecaswap/privacy_policy" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a></li>

@@ -75,3 +75,7 @@ $breakpoint: (
 @mixin font18 {
   font-size: min(2.5vw,18px);
 }
+
+@mixin caption_1 {
+  font-size: min(3vw,14px);
+}

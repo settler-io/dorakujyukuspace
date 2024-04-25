@@ -21,17 +21,16 @@ header {
   padding: 1.5vh 2vw 0;
 }
 
-#header-nav{
-  @include font18;
-  // margin-top: -1vh;
+// #header-nav{
+//   @include font18;
+//   // margin-top: -1vh;
   
-  ul{
-  display: flex;
-  gap: min(1vw,20px);
+//   ul{
+//   display: flex;
+//   gap: min(1vw,20px);
   
+//   }
+// }
+.x_logo{
+  padding-top: 0.5vh;
   }
-  .x_logo{
-  padding-top: 0.2vh;
-  }
-
-}
