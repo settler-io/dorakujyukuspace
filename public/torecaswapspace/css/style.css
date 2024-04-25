@@ -1,0 +1,398 @@
+/******************************
+base.scss
+******************************/
+html {
+  background-color: #dfc4aa;
+}
+
+body {
+  font-family: "Kaisei Opti", serif;
+  font-weight: 700;
+  font-style: normal;
+  overflow-x: hidden;
+  width: 100%;
+  color: #543200;
+  margin: auto;
+  max-width: 1100px;
+}
+body a {
+  color: #543200;
+}
+
+/******************************
+header.scss
+******************************/
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  height: 60px;
+  background-color: #fff;
+  border-bottom: solid 5px #814D00;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5vh 2vw 0;
+}
+
+#header-nav {
+  font-size: min(2.5vw, 18px);
+}
+#header-nav ul {
+  display: flex;
+  gap: min(1vw, 20px);
+}
+#header-nav .x_logo {
+  padding-top: 0.2vh;
+}
+
+/******************************
+main.scss
+******************************/
+.wrapper {
+  max-width: 1100px;
+  width: 100%;
+  background-color: #F1EAE3;
+  box-shadow: 0 0 10px #7a5216;
+}
+
+#contents {
+  display: flex;
+  flex-direction: column;
+  row-gap: min(6vh, 50px);
+  padding-bottom: 120px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 1em;
+  padding-bottom: 5vh;
+}
+
+.mv {
+  max-width: 1000px;
+  width: 100%;
+  padding: 0;
+  border: solid 5px #814D00;
+  border-image: linear-gradient(150deg, #814D00 10%, #FBBF66 50%, #814D00 60%, #FBBF66 90%) 1;
+  margin: auto;
+  margin-top: 5vh;
+  box-shadow: 0 0 10px #7a5216;
+  background: url(../images/space_mv.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  aspect-ratio: 50/17;
+}
+@media screen and (max-width: 425px) {
+  .mv {
+    background: url(../images/space_mv.jpg) no-repeat;
+    background-size: cover;
+    background-position: 80%;
+    width: 95%;
+  }
+}
+.mv h1 {
+  word-break: keep-all;
+  font-size: min(7vw, 40px);
+  line-height: 1.5em;
+  padding-right: 5em;
+}
+.mv .text_area {
+  padding-top: min(1vw, 40px);
+  padding-left: min(2vw, 70px);
+  background-color: "#dbdbdb";
+  text-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 425px) {
+  .mv .text_area {
+    text-shadow: 1px 2px 2px rgb(0, 0, 0);
+  }
+}
+.mv .catch {
+  padding-top: 0.5em;
+  font-size: min(5vw, 25px);
+  line-height: 1.5em;
+  margin: 0;
+}
+
+@media screen and (max-width: 816px) {
+  .mv h1 {
+    line-height: 1em;
+  }
+}
+/******************************
+contents
+******************************/
+.category {
+  width: 100%;
+}
+.category h2 {
+  font-size: min(5vw, 25px);
+}
+.category p {
+  line-height: 1.4em;
+  font-size: min(5vw, 20px);
+}
+.category__title {
+  font-size: min(7vw, 50px);
+  color: #814D00;
+  text-align: center;
+  position: relative;
+}
+.category__title img {
+  width: min(2em, 100px);
+  padding: 0 0.5em;
+}
+.category__waku {
+  max-width: 1000px;
+  padding: 4vh;
+  margin-top: 1vh;
+  line-height: 4vh;
+  text-align: center;
+  border-top: solid 5px #814D00;
+  border-bottom: solid 5px #814D00;
+  border-image: linear-gradient(90deg, #814D00 0%, #FBBF66 50%, #814D00 100%) 1;
+  background-color: #E4D9CF;
+}
+
+.category_m {
+  width: 80%;
+  margin: auto;
+  font-size: min(5vw, 20px);
+}
+.category_m__title_about {
+  font-size: min(7vw, 35px);
+}
+.category_m__waku {
+  max-width: 100%;
+  margin-top: 1vh;
+  line-height: 3vh;
+}
+.category_m ul {
+  padding-left: 2em;
+  list-style: square;
+}
+.category_m ul li {
+  padding-bottom: 1em;
+}
+
+.shop {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  column-gap: 1em;
+}
+.shop .image_3d img {
+  border: solid 1px #FBBF66;
+}
+
+.map_waku {
+  max-width: 1000px;
+  padding: 0 0 1px 0;
+  margin-top: 1vh;
+  text-align: center;
+  border: solid 1px #814D00;
+  border-image: linear-gradient(150deg, #814D00 10%, #FBBF66 50%, #814D00 60%, #FBBF66 90%) 1;
+  background-color: #E4D9CF;
+}
+
+/******************************
+reset.scss
+******************************/
+*,
+html {
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -webkit-tap-highlight-color: transparent; /* 3*/
+}
+
+/* Sections */
+/* ============================================ */
+/* Vertical rhythm */
+/* ============================================ */
+a {
+  text-decoration: none;
+}
+
+p,
+table,
+blockquote,
+address,
+pre,
+iframe,
+form,
+figure,
+dl {
+  margin: 0;
+}
+
+iframe {
+  display: block;
+}
+
+/* Headings */
+/* ============================================ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+/* Lists (enumeration) */
+/* ============================================ */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Lists (definition) */
+/* ============================================ */
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}
+
+/* Grouping content */
+/* ============================================ */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+  border-top-width: 1px;
+  margin: 0;
+  clear: both;
+  color: inherit;
+}
+
+/* Replaced content */
+/* ============================================ */
+/**
+ * Prevent vertical alignment issues.
+ */
+/* Forms */
+/* ============================================ */
+/**
+ * Reset form fields to make them styleable.
+ * 1. Make form elements stylable across systems iOS especially.
+ * 2. Inherit text-transform from parent.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  -webkit-appearance: none; /* 1 */
+  appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  text-align: inherit;
+  text-transform: inherit; /* 2 */
+}
+
+/**
+ * Reset radio and checkbox appearance to preserve their look in iOS.
+ */
+[type=checkbox] {
+  -webkit-appearance: checkbox;
+  appearance: checkbox;
+}
+
+[type=radio] {
+  -webkit-appearance: radio;
+  appearance: radio;
+}
+
+/**
+ * Correct cursors for clickable elements.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  cursor: pointer;
+}
+
+button:disabled,
+[type=button]:disabled,
+[type=reset]:disabled,
+[type=submit]:disabled {
+  cursor: default;
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the outline style in Safari.
+ */
+[type=search] {
+  outline-offset: -2px; /* 1 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Fix font inheritance.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/**
+ * Clickable labels
+ */
+label[for] {
+  cursor: pointer;
+}
+
+/******************************
+footer
+******************************/
+footer {
+  font-family: "Murecho", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  background-color: #e7e9ed;
+  padding: 5vh 0 10vh;
+  box-shadow: 0 -5px 10px 0px rgba(0, 0, 0, 0.2);
+}
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}/*# sourceMappingURL=style.css.map */
