@@ -166,6 +166,7 @@ contents
   border-bottom: solid 5px #814D00;
   border-image: linear-gradient(90deg, #814D00 0%, #FBBF66 50%, #814D00 100%) 1;
   background-color: #E4D9CF;
+  word-break: keep-all;
 }
 @media screen and (max-width: 450px) {
   .category__schedule {
@@ -630,9 +631,13 @@ th.fc-day-sat {
 }
 
 .fc .fc-toolbar.fc-header-toolbar {
-  margin-bottom: 0.5em;
+  margin: 0.5em 0;
 }
 
 .fc .fc-button {
   padding: 0.1em 0.3em;
+}
+
+.fc .fc-toolbar-title {
+  font-size: min(5vw, 20px);
 }/*# sourceMappingURL=style.css.map */

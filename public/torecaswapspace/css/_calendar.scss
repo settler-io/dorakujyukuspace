@@ -90,9 +90,13 @@ th.fc-day-sat {
 }
 
 .fc .fc-toolbar.fc-header-toolbar {
-  margin-bottom: 0.5em;
+  margin: 0.5em 0;
 }
 
 .fc .fc-button {
   padding: .1em .3em;
+}
+
+.fc .fc-toolbar-title {
+  font-size: min(5vw, 20px);
 }
