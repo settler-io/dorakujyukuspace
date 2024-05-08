@@ -156,66 +156,25 @@ contents
     padding: 2vh 1.5vh;
   }
 }
-
-.fc .fc-button-primary {
-  background-color: #814D00;
-  border-color: #fff;
+.category__schedule {
+  max-width: 1000px;
+  height: 660px;
+  padding: 3vh 4vh;
+  margin-top: 2vh;
+  text-align: center;
+  border-top: solid 5px #814D00;
+  border-bottom: solid 5px #814D00;
+  border-image: linear-gradient(90deg, #814D00 0%, #FBBF66 50%, #814D00 100%) 1;
+  background-color: #E4D9CF;
 }
-.fc .fc-scrollgrid {
-  border: none;
-  background-color: #ebe5e1;
-}
-
-.fc .fc-scrollgrid-section > * {
-  border: none;
-}
-
-.fc .fc-scrollgrid-sync-table {
-  border: 1px;
-}
-
-th.fc-day-sat {
-  background-color: #7bbbff;
-}
-
-.fc-day-sat .fc-daygrid-day-frame {
-  background-color: #eaf4ff;
-}
-
-.fc-day-sun {
-  background-color: #ff9d9d;
-}
-
-.fc-day-sun .fc-daygrid-day-frame {
-  background-color: #ffd3d3;
-}
-
-.fc table td {
-  border: 1px solid #814D00;
-}
-
-.fc-theme-standard td, .fc-theme-standard th {
-  border: 1px solid #814D00;
-}
-
-.fc-daygrid {
-  border: 1px solid #814D00;
-}
-
-.schedule iframe {
-  display: block;
-  aspect-ratio: 4/2;
-  width: 100%;
-  height: 100%;
-  padding: 5px;
-  margin-left: -5px;
-  background-color: #e3e9ff;
-  border-radius: 5px;
-}
-@media screen and (max-width: 500px) {
-  .schedule iframe {
-    height: 600px;
+@media screen and (max-width: 450px) {
+  .category__schedule {
+    padding: 2vh 1.5vh;
+    height: 690px;
   }
+}
+.category #calendar {
+  text-align: center;
 }
 
 .category_m {
@@ -598,4 +557,82 @@ hamburger.scss
     transform: translate(2px, 3px) rotate(-45deg); /* カスタマイズしてください */
     transform-origin: 0%; /* カスタマイズしてください */
   }
+}
+/******************************
+calender.scss
+******************************/
+.fc .fc-button-primary {
+  background-color: #814D00;
+  border-color: #fff;
+}
+.fc .fc-scrollgrid {
+  border: none;
+  background-color: #f1ecea;
+}
+
+.fc .fc-scrollgrid-section > * {
+  border: none;
+}
+
+.fc .fc-scrollgrid-sync-table {
+  border: 1px;
+}
+
+.fc-dayGridMonth-view {
+  height: 600px;
+}
+
+th.fc-day-mon,
+th.fc-day-tue,
+th.fc-day-wed,
+th.fc-day-thu,
+th.fc-day-fri {
+  background-color: #dbc5b4;
+}
+
+th.fc-day-sat {
+  background-color: #7bbbff;
+}
+
+.fc-day-sat .fc-daygrid-day-frame {
+  background-color: #eaf4ff;
+}
+
+.fc-day-sun {
+  background-color: #ff9d9d;
+}
+
+.fc-day-sun .fc-daygrid-day-frame {
+  background-color: #ffd3d3;
+}
+
+.fc table td {
+  border: 1px solid #814D00;
+}
+
+.fc-theme-standard td, .fc-theme-standard th {
+  border: 1px solid #814D00;
+}
+
+.fc-daygrid {
+  border: 1px solid #814D00;
+}
+
+.fc-header-toolbar .fc-toolbar {
+  white-space: nowap;
+  display: inline-block;
+}
+
+@media screen and (max-width: 450px) {
+  .fc .fc-toolbar {
+    display: block;
+  }
+}
+
+.fc .fc-toolbar.fc-header-toolbar {
+  margin-bottom: 0.5em;
+}
+
+.fc .fc-button {
+  padding: 0.1em 0.3em;
 }/*# sourceMappingURL=style.css.map */
