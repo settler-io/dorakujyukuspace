@@ -9,7 +9,7 @@
 
 
 $breakpoint: (
-  "small": "screen and (max-width: 425px)",
+  "small": "screen and (max-width: 435px)",
   "medium": "screen and (max-width: 767px)",
   "large": "screen and (max-width: 1023px)",
 ) !default;
@@ -60,6 +60,10 @@ $breakpoint: (
   font-size: min(7vw,50px);
 }
 
+@mixin font40{
+  font-size: min(7vw,40px);
+}
+
 @mixin font35{
   font-size: min(7vw,35px);
 }
@@ -78,4 +82,13 @@ $breakpoint: (
 
 @mixin caption_1 {
   font-size: min(3vw,14px);
+}
+
+// ******************************
+// padding
+// ******************************
+
+.padding_5 {
+  padding-bottom: 5px;
+  display: block;
 }
