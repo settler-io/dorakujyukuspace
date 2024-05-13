@@ -247,6 +247,7 @@ contents
   font-size: min(5vw, 25px);
 }
 .category_m ul {
+  padding-left: 2em;
   list-style: square;
   line-height: 1.3em;
   text-align: left;
@@ -254,7 +255,7 @@ contents
 }
 @media screen and (max-width: 435px) {
   .category_m ul {
-    width: 80%;
+    width: 90%;
     margin: auto;
   }
 }
