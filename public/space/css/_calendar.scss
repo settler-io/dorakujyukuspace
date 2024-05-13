@@ -1,0 +1,102 @@
+/******************************
+calender.scss
+******************************/
+
+  .fc {
+
+  .fc-button-primary{
+    background-color: #814D00;
+    border-color: #fff;
+  }
+    .fc-scrollgrid{
+      border: none;
+      // border: 1px solid #814D00;
+      background-color: #f1ecea;
+    }
+
+    
+  
+}
+
+.fc .fc-scrollgrid-section > *{
+  border: none;
+  // border: 1px solid #814D00;
+}
+
+.fc .fc-scrollgrid-sync-table {
+  border: 1px;
+}
+
+// .fc-button a :hover {
+//   background-color: #b97816;
+// }
+
+.fc-dayGridMonth-view {
+  height: 600px;}
+
+
+// .fc-dayGridMonth-view::-webkit-scrollbar {  
+//   display: none; 
+// }
+
+th.fc-day-mon,
+th.fc-day-tue,
+th.fc-day-wed,
+th.fc-day-thu,
+th.fc-day-fri {
+  background-color: #dbc5b4;
+}
+
+
+
+th.fc-day-sat {
+  background-color: #7bbbff;
+}
+.fc-day-sat .fc-daygrid-day-frame {
+  background-color: #eaf4ff;
+}
+
+
+.fc-day-sun {
+  background-color: #ff9d9d;
+  
+}
+.fc-day-sun .fc-daygrid-day-frame {
+  background-color: #ffd3d3;
+}
+
+.fc table td {
+  border: 1px solid #814D00;
+}
+
+.fc-theme-standard td, .fc-theme-standard th {
+  border: 1px solid #814D00;
+}
+
+.fc-daygrid{
+  border: 1px solid #814D00;
+}
+
+
+.fc-header-toolbar .fc-toolbar  {
+  white-space: nowap;
+  display: inline-block;
+}
+
+.fc .fc-toolbar{
+  @media screen and (max-width: 450px) {
+    display: block;
+  }
+}
+
+.fc .fc-toolbar.fc-header-toolbar {
+  margin: 0.5em 0;
+}
+
+.fc .fc-button {
+  padding: .1em .3em;
+}
+
+.fc .fc-toolbar-title {
+  font-size: min(5vw, 20px);
+}
