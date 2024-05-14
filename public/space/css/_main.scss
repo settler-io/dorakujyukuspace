@@ -29,7 +29,6 @@ main.scss
 
 
 .mv{
-  // position: relative;
   max-width: 1000px;
   width: 100%;
   // height: 340px;
@@ -39,7 +38,6 @@ main.scss
   margin: auto;
   margin-top: 5vh;
   box-shadow: 0 0 10px #7a5216;
-  // background-image: url(images/space_mv.jpg);
   background: url(../images/space_mv.jpg) no-repeat;
 
   background-size:cover;
@@ -56,9 +54,7 @@ main.scss
 
 
   h1{
-    // font-weight: 700;
     // font-feature-settings: "palt";
-    // letter-spacing: 0.05em;
     word-break: keep-all;
     font-size: min(5vw,35px);
     line-height: 1.2em;
@@ -110,16 +106,6 @@ main.scss
   
   }
 }
-
-// .mv:before{
-//   position: absolute;
-//   content: '';
-//   left: 0;
-//   top: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-color: rgba(102, 46, 0, 0.404);
-// }
 
 @media screen and (max-width: 816px) {
   .mv h1 {line-height: 1.1em;}
