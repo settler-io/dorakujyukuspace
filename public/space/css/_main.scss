@@ -15,7 +15,7 @@ main.scss
 #contents{
   display: flex;
   flex-direction: column;
-  row-gap: min(6vh,50px);
+  row-gap: min(12vh,70px);
   padding-bottom: 120px;
   max-width: 1000px;
   margin: auto;
@@ -23,12 +23,13 @@ main.scss
   padding-bottom: 5vh;
 
   @include mq(small) {
-    row-gap: 3vh;
+    row-gap: 5vh;
   }
 }
 
 
 .mv{
+  // position: relative;
   max-width: 1000px;
   width: 100%;
   // height: 340px;
@@ -52,7 +53,6 @@ main.scss
     background-position: 50%;
     width: 95%;
   }
-  
 
 
   h1{
@@ -60,42 +60,69 @@ main.scss
     // font-feature-settings: "palt";
     // letter-spacing: 0.05em;
     word-break: keep-all;
-    font-size: min(7vw,40px);
+    font-size: min(5vw,35px);
     line-height: 1.2em;
-    padding-right: 5em;
-    
+    letter-spacing: 0.1em;
+    padding-right: 3.5em;
 
     }
-.text_area{
-  padding-top: min(1vw,40px);
-  padding-left: min(2vw,70px);
-  background-color:"#dbdbdb";
-  text-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);
-  @include mq(small) {
-    text-shadow: 1px 3px 3px rgba(0, 0, 0, 5);
+  .text_area{
+    padding-top: min(1vw,40px);
+    padding-left: min(2vw,70px);
+    background-color:"#dbdbdb";
+    text-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);
+    @include mq(small) {
+      text-shadow: 1px 3px 3px rgba(0, 0, 0, 5);
+    }
   }
-}
 
   .catch{
-    padding-top: 1em;
-    @include font25;
+    font-size: min(3vw,30px);
     line-height: 1.8em;
     margin: 0;
-  &__large{
-    font-size: min(1.8em,50px);
+    
+    letter-spacing: 0.1em;
+
+    &_large{
+    font-size: min(5vw,51px);
+    padding-top: 1em;
   
-    @include mq(small) {
-      width: 240px;
+    @include mq(medium) {
+      display: none;
     }
+  }
+
+    &_large_sp {
+      font-size: min(1.8em,50px);
+      line-height: 1.2em;
+      padding-top: 0.3em;
+
+      @include mq(large) {
+        display: none;
+      }
+
+      @include mq(small) {
+        display: block;
+      }
+
   }
 
   
   }
 }
 
+// .mv:before{
+//   position: absolute;
+//   content: '';
+//   left: 0;
+//   top: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(102, 46, 0, 0.404);
+// }
 
 @media screen and (max-width: 816px) {
-  .mv h1 {line-height: 1em;}
+  .mv h1 {line-height: 1.1em;}
   }
 
   
@@ -140,6 +167,7 @@ contents
     border-bottom: solid 5px #814D00;
     border-image: linear-gradient(90deg, #814D00 0%, #FBBF66 50%, #814D00 100%) 1;
     background-color: #E4D9CF;
+    word-break: keep-all;
 
     @media screen and (max-width: 350px) {
       padding: 2vh 1.5vh;
@@ -181,7 +209,7 @@ contents
     @include font50;
     line-height: 1.2em;
     text-align: center;
-    margin-bottom: 0.5em;
+    margin-bottom: 1.4em;
     letter-spacing: 0.2em;
     word-break: keep-all;
     
@@ -194,22 +222,29 @@ contents
     // max-width: 100%;
     // margin-top: 4vh;
     
-    &__text{
+    &_text{
       line-height: 1.4em;
       margin: auto;
       // width: 75%;
       padding-bottom: 2em;
       text-align: left;
+      display: inline-block;  
+    }
 
-      
-          
-      }
+    &__gamelist{
+      line-height: 1.6em;
+      padding: 0 0 2em 1em;
+      text-align: left;
+      display: inline-block;  
+      @include font18;
+
+    }
       
       
     .pc_de_bodoge{
       display: flex;
-      align-items: center;
-
+      align-items: top;
+      justify-content: center;
       @include mq(small) {
         display: inline-block;
       }
@@ -219,14 +254,22 @@ contents
     .pc_bodoge_image img{
       border: solid 2px #FBBF66;
       box-shadow: 0 0 5px #7a5216;
-      margin-left: 0.5em;
+      margin: 0.5em 0 0 0.5em;
+      float: right;
+      width: clamp(200px, 30vw, 400px);
+      
+      @include mq(small) {
+        width: 240px;
+        float: none;
+        margin-bottom: 1em;
+      }
     }
 
     &__text40{
       line-height: 1.4em;
       @include font40
     }
-    &__text35{
+    &_text35{
       line-height: 1.4em;
       @include font35
     }
@@ -238,8 +281,8 @@ contents
   
   
 
-  ul{
-    padding-left: 2em;
+  ul.list{
+    padding: 0 0 2em 2em;
       list-style: square;
       line-height: 1.3em;
       text-align: left;      
@@ -251,7 +294,7 @@ contents
       }
   }
 
-  ul li{
+  ul.list li{
     padding-bottom: 1em;
   }
 }
@@ -262,7 +305,7 @@ contents
   text-align: center;
   word-break: keep-all;
   line-height: 1em;
-  @include font20;
+  @include font25;
 
   .image_3d{
     flex-wrap: wrap;
@@ -275,6 +318,7 @@ contents
     border: solid 2px #FBBF66;
     box-shadow: 0 0 5px #7a5216;
     display: inline-block;
+    margin-bottom: 1vh;
   }
 }
 

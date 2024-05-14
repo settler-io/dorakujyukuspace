@@ -10,8 +10,8 @@
 
 $breakpoint: (
   "small": "screen and (max-width: 435px)",
-  "medium": "screen and (max-width: 767px)",
-  "large": "screen and (max-width: 1023px)",
+  "medium": "screen and (max-width: 768px)",
+  "large": "screen and (min-width: 769px)",
 ) !default;
 
 
@@ -57,27 +57,50 @@ $breakpoint: (
 
 
 @mixin font50{
-  font-size: min(7vw,50px);
+  font-size: min(9vw,50px);
+}
+.font50{
+  font-size: min(9vw,50px);
 }
 
 @mixin font40{
-  font-size: min(7vw,40px);
+  font-size: min(8vw,40px);
+}
+
+.font40{
+  font-size: min(8vw,40px);
 }
 
 @mixin font35{
   font-size: min(7vw,35px);
 }
 
+.font35{
+  font-size: min(7vw,35px);
+}
+
 @mixin font25 {
-  font-size: min(5vw,25px);
+  font-size: min(6vw,25px);
+}
+
+.font25 {
+font-size: min(6vw,25px);
 }
 
 @mixin font20 {
-  font-size: min(5vw,20px);
+  font-size: min(6vw,20px);
+}
+
+.font20 {
+  font-size: min(6vw,20px);
 }
 
 @mixin font18 {
-  font-size: min(2.5vw,18px);
+  font-size: min(5.5vw,18px);
+}
+
+.font18 {
+  font-size: min(5.5vw,18px);
 }
 
 @mixin caption_1 {
@@ -90,5 +113,25 @@ $breakpoint: (
 
 .padding_5 {
   padding-bottom: 5px;
+  display: block;
+}
+
+.padding_10 {
+  padding-bottom: 10px;
+  display: block;
+}
+
+.padding_15 {
+  padding-bottom: 15px;
+  display: block;
+}
+
+.padding_20 {
+  padding-bottom: 20px;
+  display: block;
+}
+
+.padding_30 {
+  padding-bottom: 30px;
   display: block;
 }

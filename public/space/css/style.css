@@ -2,8 +2,52 @@
 /******************************
 base.scss
 ******************************/
+.font50 {
+  font-size: min(9vw, 50px);
+}
+
+.font40 {
+  font-size: min(8vw, 40px);
+}
+
+.font35 {
+  font-size: min(7vw, 35px);
+}
+
+.font25 {
+  font-size: min(6vw, 25px);
+}
+
+.font20 {
+  font-size: min(6vw, 20px);
+}
+
+.font18 {
+  font-size: min(5.5vw, 18px);
+}
+
 .padding_5 {
   padding-bottom: 5px;
+  display: block;
+}
+
+.padding_10 {
+  padding-bottom: 10px;
+  display: block;
+}
+
+.padding_15 {
+  padding-bottom: 15px;
+  display: block;
+}
+
+.padding_20 {
+  padding-bottom: 20px;
+  display: block;
+}
+
+.padding_30 {
+  padding-bottom: 30px;
   display: block;
 }
 
@@ -62,7 +106,7 @@ main.scss
 #contents {
   display: flex;
   flex-direction: column;
-  row-gap: min(6vh, 50px);
+  row-gap: min(12vh, 70px);
   padding-bottom: 120px;
   max-width: 1000px;
   margin: auto;
@@ -71,7 +115,7 @@ main.scss
 }
 @media screen and (max-width: 435px) {
   #contents {
-    row-gap: 3vh;
+    row-gap: 5vh;
   }
 }
 
@@ -100,9 +144,10 @@ main.scss
 }
 .mv h1 {
   word-break: keep-all;
-  font-size: min(7vw, 40px);
+  font-size: min(5vw, 35px);
   line-height: 1.2em;
-  padding-right: 5em;
+  letter-spacing: 0.1em;
+  padding-right: 3.5em;
 }
 .mv .text_area {
   padding-top: min(1vw, 40px);
@@ -116,23 +161,39 @@ main.scss
   }
 }
 .mv .catch {
-  padding-top: 1em;
-  font-size: min(5vw, 25px);
+  font-size: min(3vw, 30px);
   line-height: 1.8em;
   margin: 0;
+  letter-spacing: 0.1em;
 }
-.mv .catch__large {
+.mv .catch_large {
+  font-size: min(5vw, 51px);
+  padding-top: 1em;
+}
+@media screen and (max-width: 768px) {
+  .mv .catch_large {
+    display: none;
+  }
+}
+.mv .catch_large_sp {
   font-size: min(1.8em, 50px);
+  line-height: 1.2em;
+  padding-top: 0.3em;
+}
+@media screen and (min-width: 769px) {
+  .mv .catch_large_sp {
+    display: none;
+  }
 }
 @media screen and (max-width: 435px) {
-  .mv .catch__large {
-    width: 240px;
+  .mv .catch_large_sp {
+    display: block;
   }
 }
 
 @media screen and (max-width: 816px) {
   .mv h1 {
-    line-height: 1em;
+    line-height: 1.1em;
   }
 }
 /******************************
@@ -142,14 +203,14 @@ contents
   width: 100%;
 }
 .category h2 {
-  font-size: min(5vw, 25px);
+  font-size: min(6vw, 25px);
 }
 .category p {
   line-height: 1.4em;
-  font-size: min(5vw, 20px);
+  font-size: min(6vw, 20px);
 }
 .category__title {
-  font-size: min(7vw, 50px);
+  font-size: min(9vw, 50px);
   color: #814D00;
   text-align: center;
   position: relative;
@@ -168,6 +229,7 @@ contents
   border-bottom: solid 5px #814D00;
   border-image: linear-gradient(90deg, #814D00 0%, #FBBF66 50%, #814D00 100%) 1;
   background-color: #E4D9CF;
+  word-break: keep-all;
 }
 @media screen and (max-width: 350px) {
   .category__waku {
@@ -199,30 +261,39 @@ contents
 .category_m {
   width: 95%;
   margin: auto;
-  font-size: min(5vw, 20px);
+  font-size: min(6vw, 20px);
   line-height: 1.5em;
   text-align: center;
 }
 .category_m__title_about {
-  font-size: min(7vw, 50px);
+  font-size: min(9vw, 50px);
   line-height: 1.2em;
   text-align: center;
-  margin-bottom: 0.5em;
+  margin-bottom: 1.4em;
   letter-spacing: 0.2em;
   word-break: keep-all;
 }
 .category_m .title_text25 {
   font-size: min(7vw, 35px);
 }
-.category_m__text {
+.category_m_text {
   line-height: 1.4em;
   margin: auto;
   padding-bottom: 2em;
   text-align: left;
+  display: inline-block;
+}
+.category_m__gamelist {
+  line-height: 1.6em;
+  padding: 0 0 2em 1em;
+  text-align: left;
+  display: inline-block;
+  font-size: min(5.5vw, 18px);
 }
 .category_m .pc_de_bodoge {
   display: flex;
-  align-items: center;
+  align-items: top;
+  justify-content: center;
 }
 @media screen and (max-width: 435px) {
   .category_m .pc_de_bodoge {
@@ -232,34 +303,43 @@ contents
 .category_m .pc_bodoge_image img {
   border: solid 2px #FBBF66;
   box-shadow: 0 0 5px #7a5216;
-  margin-left: 0.5em;
+  margin: 0.5em 0 0 0.5em;
+  float: right;
+  width: clamp(200px, 30vw, 400px);
+}
+@media screen and (max-width: 435px) {
+  .category_m .pc_bodoge_image img {
+    width: 240px;
+    float: none;
+    margin-bottom: 1em;
+  }
 }
 .category_m__text40 {
   line-height: 1.4em;
-  font-size: min(7vw, 40px);
+  font-size: min(8vw, 40px);
 }
-.category_m__text35 {
+.category_m_text35 {
   line-height: 1.4em;
   font-size: min(7vw, 35px);
 }
 .category_m__text25 {
   line-height: 1.4em;
-  font-size: min(5vw, 25px);
+  font-size: min(6vw, 25px);
 }
-.category_m ul {
-  padding-left: 2em;
+.category_m ul.list {
+  padding: 0 0 2em 2em;
   list-style: square;
   line-height: 1.3em;
   text-align: left;
   display: inline-block;
 }
 @media screen and (max-width: 435px) {
-  .category_m ul {
+  .category_m ul.list {
     width: 90%;
     margin: auto;
   }
 }
-.category_m ul li {
+.category_m ul.list li {
   padding-bottom: 1em;
 }
 
@@ -269,7 +349,7 @@ contents
   text-align: center;
   word-break: keep-all;
   line-height: 1em;
-  font-size: min(5vw, 20px);
+  font-size: min(6vw, 25px);
 }
 .shop .image_3d {
   flex-wrap: wrap;
@@ -281,6 +361,7 @@ contents
   border: solid 2px #FBBF66;
   box-shadow: 0 0 5px #7a5216;
   display: inline-block;
+  margin-bottom: 1vh;
 }
 
 .caption_1 {
@@ -505,7 +586,7 @@ hamburger.scss
   justify-content: space-between;
   padding: 1rem 2rem; /* カスタマイズしてください */
   width: 100%;
-  font-size: min(2.5vw, 18px);
+  font-size: min(5.5vw, 18px);
 }
 
 .c-header__logo {
