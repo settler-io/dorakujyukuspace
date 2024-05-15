@@ -77,7 +77,8 @@ body a {
 /******************************
 header.scss
 ******************************/
-header {
+.c-header,
+.c-hamburger-menu {
   position: sticky;
   top: 0;
   width: 100%;
@@ -622,7 +623,7 @@ hamburger.scss
   justify-content: space-between;
   padding: 1rem 2rem; /* カスタマイズしてください */
   width: 100%;
-  font-size: min(5vw, 18px);
+  font-size: min(6vw, 20px);
 }
 
 .c-header__logo {
@@ -655,10 +656,6 @@ hamburger.scss
 
 .c-header__list-link:hover {
   filter: opacity(0.6); /* カスタマイズしてください */
-}
-
-.c-hamburger-menu {
-  position: relative;
 }
 
 @media screen and (max-width: 750px) {

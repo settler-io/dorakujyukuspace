@@ -11,7 +11,7 @@ hamburger.scss
   justify-content: space-between;
   padding: 1rem 2rem; /* カスタマイズしてください */
   width: 100%;
-  @include font18;
+  @include font20;
 }
 
 .c-header__logo {
@@ -50,9 +50,9 @@ hamburger.scss
   filter: opacity(0.6); /* カスタマイズしてください */
 }
 
-.c-hamburger-menu {
-  position: relative;
-}
+// .c-hamburger-menu {
+//   position: relative;
+// }
 
 @media screen and (max-width: 750px) {
   .c-hamburger-menu__list {
