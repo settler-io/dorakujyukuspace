@@ -9,7 +9,7 @@
 
 
 $breakpoint: (
-  "small": "screen and (max-width: 435px)",
+  "small": "screen and (max-width: 450px)",
   "medium": "screen and (max-width: 768px)",
   "large": "screen and (min-width: 769px)",
 ) !default;
@@ -44,9 +44,11 @@ $breakpoint: (
   font-weight: $weight;
 }
 
-@mixin murecho {
+@mixin murecho-bold {
   font-family: "Murecho", sans-serif;
+  font-weight: 900;
 }
+
 
 
 
@@ -72,19 +74,21 @@ $breakpoint: (
 }
 
 @mixin font35{
+  line-height: 1.8em;
   font-size: min(7vw,35px);
 }
 
 .font35{
+  line-height: 1.8em;
   font-size: min(7vw,35px);
 }
 
 @mixin font25 {
-  font-size: min(6vw,25px);
+  font-size: min(7vw,25px);
 }
 
 .font25 {
-font-size: min(6vw,25px);
+font-size: min(7vw,25px);
 }
 
 @mixin font20 {
@@ -96,15 +100,19 @@ font-size: min(6vw,25px);
 }
 
 @mixin font18 {
-  font-size: min(5.5vw,18px);
+  font-size: min(5vw,18px);
 }
 
 .font18 {
-  font-size: min(5.5vw,18px);
+  font-size: min(5vw,18px);
 }
 
 @mixin caption_1 {
   font-size: min(3vw,14px);
+}
+
+.font_red{
+  color: #be0000;
 }
 
 // ******************************

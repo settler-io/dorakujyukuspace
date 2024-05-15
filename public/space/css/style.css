@@ -11,11 +11,12 @@ base.scss
 }
 
 .font35 {
+  line-height: 1.8em;
   font-size: min(7vw, 35px);
 }
 
 .font25 {
-  font-size: min(6vw, 25px);
+  font-size: min(7vw, 25px);
 }
 
 .font20 {
@@ -23,7 +24,11 @@ base.scss
 }
 
 .font18 {
-  font-size: min(5.5vw, 18px);
+  font-size: min(5vw, 18px);
+}
+
+.font_red {
+  color: #be0000;
 }
 
 .padding_5 {
@@ -113,7 +118,7 @@ main.scss
   padding: 0 1em;
   padding-bottom: 5vh;
 }
-@media screen and (max-width: 435px) {
+@media screen and (max-width: 450px) {
   #contents {
     row-gap: 5vh;
   }
@@ -134,17 +139,18 @@ main.scss
   color: #fff;
   aspect-ratio: 50/17;
 }
-@media screen and (max-width: 435px) {
+@media screen and (max-width: 450px) {
   .mv {
-    background: url(../images/space_mv.jpg) no-repeat;
+    background: url(../images/space_mv_sp.jpg) no-repeat;
     background-size: cover;
-    background-position: 50%;
+    background-position: top;
     width: 95%;
+    height: 450px;
   }
 }
 .mv h1 {
   word-break: keep-all;
-  font-size: min(5vw, 35px);
+  font-size: min(8vw, 35px);
   line-height: 1.2em;
   letter-spacing: 0.1em;
   padding-right: 3.5em;
@@ -155,13 +161,14 @@ main.scss
   background-color: "#dbdbdb";
   text-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);
 }
-@media screen and (max-width: 435px) {
+@media screen and (max-width: 450px) {
   .mv .text_area {
+    padding-top: 170px;
     text-shadow: 1px 3px 3px rgb(0, 0, 0);
   }
 }
 .mv .catch {
-  font-size: min(3vw, 30px);
+  font-size: min(6vw, 30px);
   line-height: 1.8em;
   margin: 0;
   letter-spacing: 0.1em;
@@ -176,7 +183,7 @@ main.scss
   }
 }
 .mv .catch_large_sp {
-  font-size: min(1.8em, 50px);
+  font-size: min(2em, 50px);
   line-height: 1.2em;
   padding-top: 0.3em;
 }
@@ -185,7 +192,7 @@ main.scss
     display: none;
   }
 }
-@media screen and (max-width: 435px) {
+@media screen and (max-width: 450px) {
   .mv .catch_large_sp {
     display: block;
   }
@@ -199,44 +206,146 @@ main.scss
 /******************************
 contents
 ******************************/
-.category {
-  width: 100%;
+/******************************
+category_1
+******************************/
+.category_1 {
+  width: 95%;
+  margin: auto;
+  font-size: min(7vw, 25px);
+  line-height: 1.5em;
+  text-align: center;
 }
-.category h2 {
-  font-size: min(6vw, 25px);
+.category_1__title_about {
+  font-size: min(9vw, 50px);
+  line-height: 1.2em;
+  text-align: center;
+  margin-bottom: 1em;
+  letter-spacing: 0.2em;
+  word-break: keep-all;
 }
-.category p {
-  line-height: 1.4em;
+.category_1 .title_text25 {
+  line-height: 1.8em;
+  font-size: min(7vw, 35px);
+}
+.category_1__text {
+  line-height: 1.6em;
+  margin: auto;
+  padding-bottom: 2em;
+  word-break: keep-all;
+}
+.category_1__gamelist {
+  line-height: 1.6em;
+  padding: 0 0 2em 1em;
+  text-align: left;
+  display: inline-block;
   font-size: min(6vw, 20px);
 }
-.category__title {
+.category_1__text40 {
+  line-height: 1.4em;
+  font-size: min(8vw, 40px);
+}
+.category_1__text35 {
+  line-height: 1.4em;
+  line-height: 1.8em;
+  font-size: min(7vw, 35px);
+}
+.category_1__text25 {
+  line-height: 1.4em;
+  font-size: min(7vw, 25px);
+}
+.category_1 .pc_de_bodoge {
+  display: flex;
+  align-items: top;
+  justify-content: center;
+}
+@media screen and (max-width: 450px) {
+  .category_1 .pc_de_bodoge {
+    display: inline-block;
+  }
+}
+.category_1 .pc_bodoge_image img {
+  border: solid 2px #FBBF66;
+  box-shadow: 0 0 5px #7a5216;
+  margin: 0.5em 0 0 0.5em;
+  float: right;
+  width: clamp(200px, 30vw, 400px);
+}
+@media screen and (max-width: 450px) {
+  .category_1 .pc_bodoge_image img {
+    width: 240px;
+    float: none;
+    margin-bottom: 1em;
+  }
+}
+.category_1 ul.list {
+  padding: 0 0 2em 2em;
+  list-style: square;
+  line-height: 1.3em;
+  text-align: left;
+  display: inline-block;
+}
+@media screen and (max-width: 450px) {
+  .category_1 ul.list {
+    width: 90%;
+    margin: auto;
+    padding: 0 0 1em 1em;
+  }
+}
+.category_1 ul.list li {
+  padding-bottom: 1em;
+}
+
+/******************************
+category_2
+******************************/
+.category_2 {
+  width: 100%;
+  text-align: center;
+  /* shop */
+}
+.category_2 h2 {
+  font-size: min(7vw, 25px);
+}
+.category_2 p {
+  font-size: min(7vw, 25px);
+  word-break: keep-all;
+}
+.category_2__title {
   font-size: min(9vw, 50px);
   color: #814D00;
   text-align: center;
-  position: relative;
+  white-space: no-wrap;
+  display: inline-block;
 }
-.category__title img {
+.category_2__title img {
   width: min(2em, 100px);
-  padding: 0 0.5em;
+  display: inline-block;
 }
-.category__waku {
+.category_2__title .title_text {
+  padding: 0 0.2em;
+}
+.category_2__waku {
   max-width: 1000px;
   padding: 4vh;
   margin-top: 2vh;
-  line-height: 4vh;
   text-align: center;
   border-top: solid 5px #814D00;
   border-bottom: solid 5px #814D00;
   border-image: linear-gradient(90deg, #814D00 0%, #FBBF66 50%, #814D00 100%) 1;
   background-color: #E4D9CF;
-  word-break: keep-all;
+  word-break: break-all;
 }
 @media screen and (max-width: 350px) {
-  .category__waku {
+  .category_2__waku {
     padding: 2vh 1.5vh;
   }
 }
-.category__schedule {
+.category_2__layout_left {
+  text-align: left;
+  display: inline-block;
+}
+.category_2__calendar_waku {
   max-width: 1000px;
   height: 680px;
   padding: 3vh 4vh;
@@ -249,107 +358,25 @@ contents
   word-break: keep-all;
 }
 @media screen and (max-width: 450px) {
-  .category__schedule {
+  .category_2__calendar_waku {
     padding: 2vh 1.5vh;
-    height: 710px;
+    height: 750px;
   }
 }
-.category #calendar {
+.category_2 #calendar {
   text-align: center;
 }
 
-.category_m {
-  width: 95%;
-  margin: auto;
-  font-size: min(6vw, 20px);
-  line-height: 1.5em;
-  text-align: center;
-}
-.category_m__title_about {
-  font-size: min(9vw, 50px);
-  line-height: 1.2em;
-  text-align: center;
-  margin-bottom: 1.4em;
-  letter-spacing: 0.2em;
-  word-break: keep-all;
-}
-.category_m .title_text25 {
-  font-size: min(7vw, 35px);
-}
-.category_m_text {
-  line-height: 1.4em;
-  margin: auto;
-  padding-bottom: 2em;
-  text-align: left;
-  display: inline-block;
-}
-.category_m__gamelist {
-  line-height: 1.6em;
-  padding: 0 0 2em 1em;
-  text-align: left;
-  display: inline-block;
-  font-size: min(5.5vw, 18px);
-}
-.category_m .pc_de_bodoge {
-  display: flex;
-  align-items: top;
-  justify-content: center;
-}
-@media screen and (max-width: 435px) {
-  .category_m .pc_de_bodoge {
-    display: inline-block;
-  }
-}
-.category_m .pc_bodoge_image img {
-  border: solid 2px #FBBF66;
-  box-shadow: 0 0 5px #7a5216;
-  margin: 0.5em 0 0 0.5em;
-  float: right;
-  width: clamp(200px, 30vw, 400px);
-}
-@media screen and (max-width: 435px) {
-  .category_m .pc_bodoge_image img {
-    width: 240px;
-    float: none;
-    margin-bottom: 1em;
-  }
-}
-.category_m__text40 {
-  line-height: 1.4em;
-  font-size: min(8vw, 40px);
-}
-.category_m_text35 {
-  line-height: 1.4em;
-  font-size: min(7vw, 35px);
-}
-.category_m__text25 {
-  line-height: 1.4em;
-  font-size: min(6vw, 25px);
-}
-.category_m ul.list {
-  padding: 0 0 2em 2em;
-  list-style: square;
-  line-height: 1.3em;
-  text-align: left;
-  display: inline-block;
-}
-@media screen and (max-width: 435px) {
-  .category_m ul.list {
-    width: 90%;
-    margin: auto;
-  }
-}
-.category_m ul.list li {
-  padding-bottom: 1em;
-}
-
+/******************************
+shop
+******************************/
 .shop {
   width: 95%;
   margin: auto;
   text-align: center;
   word-break: keep-all;
   line-height: 1em;
-  font-size: min(6vw, 25px);
+  font-size: min(7vw, 25px);
 }
 .shop .image_3d {
   flex-wrap: wrap;
@@ -364,10 +391,9 @@ contents
   margin-bottom: 1vh;
 }
 
-.caption_1 {
-  font-size: min(3vw, 14px);
-}
-
+/******************************
+map
+******************************/
 .map_waku {
   max-width: 1000px;
   padding: 0 0 1px 0;
@@ -560,7 +586,8 @@ footer
 ******************************/
 footer {
   font-family: "Murecho", sans-serif;
-  font-size: 12px;
+  font-weight: 900;
+  font-size: 14px;
   font-weight: 600;
   width: 100%;
   text-align: center;
@@ -574,6 +601,15 @@ footer ul {
   justify-content: center;
   gap: 1em;
 }
+@media screen and (max-width: 768px) {
+  footer ul {
+    width: 80%;
+    margin: auto;
+  }
+}
+footer ul li {
+  white-space: no-wrap;
+}
 
 /******************************
 hamburger.scss
@@ -586,7 +622,7 @@ hamburger.scss
   justify-content: space-between;
   padding: 1rem 2rem; /* カスタマイズしてください */
   width: 100%;
-  font-size: min(5.5vw, 18px);
+  font-size: min(5vw, 18px);
 }
 
 .c-header__logo {
