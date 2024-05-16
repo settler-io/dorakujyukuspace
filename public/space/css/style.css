@@ -152,9 +152,9 @@ main.scss
 .mv h1 {
   word-break: keep-all;
   font-size: min(8vw, 35px);
-  line-height: 1.2em;
+  line-height: 1.5em;
   letter-spacing: 0.1em;
-  padding-right: 3.5em;
+  padding-right: 0em;
 }
 .mv .text_area {
   padding-top: min(1vw, 40px);
@@ -621,7 +621,7 @@ hamburger.scss
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  padding: 1rem 2rem; /* カスタマイズしてください */
+  padding: 1rem; /* カスタマイズしてください */
   width: 100%;
   font-size: min(6vw, 20px);
 }
@@ -630,7 +630,7 @@ hamburger.scss
   color: #000; /* カスタマイズしてください */
   min-width: 80px; /* カスタマイズしてください */
   text-decoration: none;
-  padding: 1.5vh 2vw 0;
+  padding: 1.5vh 0vw 0;
 }
 
 .c-header__list {
