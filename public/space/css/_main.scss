@@ -6,16 +6,14 @@ main.scss
 .wrapper{
   max-width: 1100px;
   width: 100%;
-  // margin: auto;
   background-color: #F1EAE3;
   box-shadow: 0 0 10px #7a5216;
 }
 
-
 #contents{
   display: flex;
   flex-direction: column;
-  row-gap: min(6vh,50px);
+  row-gap: min(12vh,70px);
   padding-bottom: 120px;
   max-width: 1000px;
   margin: auto;
@@ -23,205 +21,136 @@ main.scss
   padding-bottom: 5vh;
 
   @include mq(small) {
-    row-gap: 3vh;
+    row-gap: 5vh;
   }
 }
-
 
 .mv{
   max-width: 1000px;
   width: 100%;
-  // height: 340px;
   padding:0;
   border: solid 5px #814D00;
   border-image: linear-gradient(150deg, #814D00 10%, #FBBF66 50%, #814D00 60%, #FBBF66 90%) 1;
   margin: auto;
   margin-top: 5vh;
   box-shadow: 0 0 10px #7a5216;
-  // background-image: url(images/space_mv.jpg);
   background: url(../images/space_mv.jpg) no-repeat;
-
   background-size:cover;
   background-position: center;
   color: #fff;
   aspect-ratio: 50/17;
 
   @include mq(small) {
-    background: url(../images/space_mv.jpg) no-repeat;
+    background: url(../images/space_mv_sp.jpg) no-repeat;
     background-size:cover;
-    background-position: 50%;
+    background-position: top;
     width: 95%;
+    height: 450px;
   }
-  
-
 
   h1{
-    // font-weight: 700;
     // font-feature-settings: "palt";
-    // letter-spacing: 0.05em;
     word-break: keep-all;
-    font-size: min(7vw,40px);
-    line-height: 1.2em;
-    padding-right: 5em;
-    
-
+    font-size: min(8vw,35px);
+    line-height: 1.5em;
+    letter-spacing: 0.1em;
+    padding-right: 0em;
     }
-.text_area{
-  padding-top: min(1vw,40px);
-  padding-left: min(2vw,70px);
-  background-color:"#dbdbdb";
-  text-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);
-  @include mq(small) {
-    text-shadow: 1px 3px 3px rgba(0, 0, 0, 5);
+
+  .text_area{
+    padding-top: min(1vw,40px);
+    padding-left: min(2vw,70px);
+    background-color:"#dbdbdb";
+    text-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);
+
+    @include mq(small) {
+      padding-top: 170px;
+      text-shadow: 1px 3px 3px rgba(0, 0, 0, 5);
+    }
   }
-}
 
   .catch{
-    padding-top: 1em;
-    @include font25;
+    font-size: min(6vw,30px);
     line-height: 1.8em;
     margin: 0;
-  &__large{
-    font-size: min(1.8em,50px);
-  
-    @include mq(small) {
-      width: 240px;
-    }
-  }
+    letter-spacing: 0.1em;
 
-  
+      &_large{
+        font-size: min(5vw,51px);
+        padding-top: 1em;
+      
+        @include mq(medium) {
+          display: none;
+        }
+      }
+
+      &_large_sp {
+        font-size: min(2em,50px);
+        line-height: 1.2em;
+        padding-top: 0.3em;
+
+        @include mq(large) {
+          display: none;
+        }
+
+        @include mq(small) {
+          display: block;
+        }
+      }
   }
 }
 
-
 @media screen and (max-width: 816px) {
-  .mv h1 {line-height: 1em;}
+  .mv h1 {line-height: 1.1em;}
   }
 
-  
 
 /******************************
 contents
 ******************************/
 
+/******************************
+category_1
+******************************/
 
-.category{
-  width: 100%;
-
-  h2{
-  @include font25;
-
-  }
-
-  p{
-    line-height: 1.4em;
-    @include font20;
-  }
-
-  &__title{
-    @include font50;
-    color:#814D00;
-    text-align: center;
-    position: relative;
-
-      img {
-        width: min(2em,100px);
-        padding:0 0.5em;
-      }
-  }
-  
-  &__waku{
-    max-width: 1000px;
-    padding: 4vh;
-    margin-top: 2vh;
-    line-height: 4vh;
-    text-align: center;
-    border-top: solid 5px #814D00;
-    border-bottom: solid 5px #814D00;
-    border-image: linear-gradient(90deg, #814D00 0%, #FBBF66 50%, #814D00 100%) 1;
-    background-color: #E4D9CF;
-
-    @media screen and (max-width: 350px) {
-      padding: 2vh 1.5vh;
-    }
-  }
-  
-  &__schedule {
-    max-width: 1000px;
-    height: 680px;
-    padding: 3vh 4vh;
-    margin-top: 2vh;
-    text-align: center;
-    border-top: solid 5px #814D00;
-    border-bottom: solid 5px #814D00;
-    border-image: linear-gradient(90deg, #814D00 0%, #FBBF66 50%, #814D00 100%) 1;
-    background-color: #E4D9CF;
-    word-break: keep-all;
-
-    @media screen and (max-width: 450px) {
-      padding: 2vh 1.5vh;
-      height: 710px;
-    }
-  }
-
-  #calendar{
-    // aspect-ratio: 4 / 2;
-    text-align: center;
-  }
-  }
-
-.category_m {
+.category_1 {
   width: 95%;
   margin: auto;
-  @include font20;
+  @include font25;
   line-height: 1.5em;
   text-align: center;
   
-  &__title_about{
-    @include font50;
-    line-height: 1.2em;
-    text-align: center;
-    margin-bottom: 0.5em;
-    letter-spacing: 0.2em;
-    word-break: keep-all;
-    
-  }
+    &__title_about{
+      @include font50;
+      line-height: 1.2em;
+      text-align: center;
+      margin-bottom: 01em;
+      letter-spacing: 0.2em;
+      word-break: keep-all;
+    }
 
   .title_text25{
     @include font35;
   }
-
-    // max-width: 100%;
-    // margin-top: 4vh;
     
     &__text{
-      line-height: 1.4em;
+      line-height: 1.6em;
       margin: auto;
-      // width: 75%;
       padding-bottom: 2em;
+      // text-align: left;
+      // display: inline-block;  
+      word-break: keep-all;
+      // width: 80%;
+    }
+
+    &__gamelist{
+      line-height: 1.6em;
+      padding: 0 0 2em 1em;
       text-align: left;
-
-      
-          
-      }
-      
-      
-    .pc_de_bodoge{
-      display: flex;
-      align-items: center;
-
-      @include mq(small) {
-        display: inline-block;
-      }
+      display: inline-block;  
+      @include font20;
     }
-
-
-    .pc_bodoge_image img{
-      border: solid 2px #FBBF66;
-      box-shadow: 0 0 5px #7a5216;
-      margin-left: 0.5em;
-    }
-
+      
     &__text40{
       line-height: 1.4em;
       @include font40
@@ -236,10 +165,32 @@ contents
       @include font25
     }
   
-  
+    .pc_de_bodoge{
+      display: flex;
+      align-items: top;
+      justify-content: center;
+      
+      @include mq(small) {
+        display: inline-block;
+      }
+    }
 
-  ul{
-    padding-left: 2em;
+    .pc_bodoge_image img{
+      border: solid 2px #FBBF66;
+      box-shadow: 0 0 5px #7a5216;
+      margin: 0.5em 0 0 0.5em;
+      float: right;
+      width: clamp(200px, 30vw, 400px);
+      
+      @include mq(small) {
+        width: 240px;
+        float: none;
+        margin-bottom: 1em;
+      }
+    }
+
+  ul.list{
+    padding: 0 0 2em 2em;
       list-style: square;
       line-height: 1.3em;
       text-align: left;      
@@ -248,13 +199,103 @@ contents
       @include mq(small) {
         width: 90%;
         margin: auto;
+        padding: 0 0 1em 1em;
       }
   }
 
-  ul li{
+  ul.list li{
     padding-bottom: 1em;
   }
 }
+
+/******************************
+category_2
+******************************/
+
+.category_2 {
+  width: 100%;
+  text-align: center;
+  
+
+  h2{
+  @include font25;
+
+  }
+
+  p{
+    @include font25;
+  word-break: keep-all;
+  }
+
+  &__title{
+    @include font50;
+    color:#814D00;
+    text-align: center;
+    white-space: no-wrap;
+    // position: relative;
+    display: inline-block;
+
+      img {
+        width: min(2em,100px);
+        
+        display: inline-block;
+      }
+
+      .title_text{
+        padding: 0 0.2em;
+      }
+  }
+  
+  &__waku{
+    max-width: 1000px;
+    padding: 4vh;
+    margin-top: 2vh;
+    text-align: center;
+    border-top: solid 5px #814D00;
+    border-bottom: solid 5px #814D00;
+    border-image: linear-gradient(90deg, #814D00 0%, #FBBF66 50%, #814D00 100%) 1;
+    background-color: #E4D9CF;
+    word-break:break-all;
+
+    @media screen and (max-width: 350px) {
+      padding: 2vh 1.5vh;
+    }
+  }
+
+  &__layout_left {
+    text-align: left;
+    display: inline-block;  
+  }
+  
+  /* shop */
+
+  &__calendar_waku {
+    max-width: 1000px;
+    height: 680px;
+    padding: 3vh 4vh;
+    margin-top: 2vh;
+    text-align: center;
+    border-top: solid 5px #814D00;
+    border-bottom: solid 5px #814D00;
+    border-image: linear-gradient(90deg, #814D00 0%, #FBBF66 50%, #814D00 100%) 1;
+    background-color: #E4D9CF;
+    word-break: keep-all;
+
+    @include mq(small) {
+      padding: 2vh 1.5vh;
+      height: 750px;
+    }
+  }
+
+  #calendar{
+    // aspect-ratio: 4 / 2;
+    text-align: center;
+  }
+  }
+
+/******************************
+shop
+******************************/
 
 .shop{
   width: 95%;
@@ -262,7 +303,7 @@ contents
   text-align: center;
   word-break: keep-all;
   line-height: 1em;
-  @include font20;
+  @include font25;
 
   .image_3d{
     flex-wrap: wrap;
@@ -275,12 +316,14 @@ contents
     border: solid 2px #FBBF66;
     box-shadow: 0 0 5px #7a5216;
     display: inline-block;
+    margin-bottom: 1vh;
   }
 }
 
-.caption_1{
-  @include caption_1;
-}
+
+/******************************
+map
+******************************/
 
 .map_waku{
   max-width: 1000px;

@@ -4,7 +4,8 @@ header.scss
 ******************************/
 @use "common" as *;
 
-header {
+.c-header,
+.c-hamburger-menu {
   position: sticky;
   top: 0;
   width: 100%;

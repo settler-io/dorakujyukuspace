@@ -4,8 +4,8 @@ footer
 @use "common" as *;
 
 footer{
-  @include murecho;
-  font-size: 12px;
+  @include murecho-bold;
+  font-size: 14px;
   font-weight:  600;
   width: 100%;
   text-align: center;
@@ -19,5 +19,13 @@ footer{
     flex-wrap: wrap;
     justify-content: center;
     gap: 1em;
+    
+    @include mq(medium) {
+      width: 80%;
+      margin: auto;
+    }
   }
+
+  ul li {
+    white-space: no-wrap;}
 }
