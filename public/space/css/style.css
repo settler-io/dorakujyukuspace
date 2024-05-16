@@ -130,7 +130,8 @@ main.scss
   width: 100%;
   padding: 0;
   border: solid 5px #814D00;
-  border-image: linear-gradient(150deg, #814D00 10%, #FBBF66 50%, #814D00 60%, #FBBF66 90%) 1;
+  -o-border-image: linear-gradient(150deg, #814D00 10%, #FBBF66 50%, #814D00 60%, #FBBF66 90%) 1;
+     border-image: linear-gradient(150deg, #814D00 10%, #FBBF66 50%, #814D00 60%, #FBBF66 90%) 1;
   margin: auto;
   margin-top: 5vh;
   box-shadow: 0 0 10px #7a5216;
@@ -244,7 +245,7 @@ category_1
 }
 .category_1__text40 {
   line-height: 1.4em;
-  font-size: min(8vw, 40px);
+  font-size: min(7vw, 40px);
 }
 .category_1__text35 {
   line-height: 1.4em;
@@ -333,7 +334,8 @@ category_2
   text-align: center;
   border-top: solid 5px #814D00;
   border-bottom: solid 5px #814D00;
-  border-image: linear-gradient(90deg, #814D00 0%, #FBBF66 50%, #814D00 100%) 1;
+  -o-border-image: linear-gradient(90deg, #814D00 0%, #FBBF66 50%, #814D00 100%) 1;
+     border-image: linear-gradient(90deg, #814D00 0%, #FBBF66 50%, #814D00 100%) 1;
   background-color: #E4D9CF;
   word-break: break-all;
 }
@@ -354,7 +356,8 @@ category_2
   text-align: center;
   border-top: solid 5px #814D00;
   border-bottom: solid 5px #814D00;
-  border-image: linear-gradient(90deg, #814D00 0%, #FBBF66 50%, #814D00 100%) 1;
+  -o-border-image: linear-gradient(90deg, #814D00 0%, #FBBF66 50%, #814D00 100%) 1;
+     border-image: linear-gradient(90deg, #814D00 0%, #FBBF66 50%, #814D00 100%) 1;
   background-color: #E4D9CF;
   word-break: keep-all;
 }
@@ -383,7 +386,8 @@ shop
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
-  column-gap: 1vw;
+  -moz-column-gap: 1vw;
+       column-gap: 1vw;
 }
 .shop .image_3d img {
   border: solid 2px #FBBF66;
@@ -401,7 +405,8 @@ map
   margin-top: 1vh;
   text-align: center;
   border: solid 1px #814D00;
-  border-image: linear-gradient(150deg, #814D00 10%, #FBBF66 50%, #814D00 60%, #FBBF66 90%) 1;
+  -o-border-image: linear-gradient(150deg, #814D00 10%, #FBBF66 50%, #814D00 60%, #FBBF66 90%) 1;
+     border-image: linear-gradient(150deg, #814D00 10%, #FBBF66 50%, #814D00 60%, #FBBF66 90%) 1;
   background-color: #E4D9CF;
 }
 
@@ -502,7 +507,8 @@ optgroup,
 select,
 textarea {
   -webkit-appearance: none; /* 1 */
-  appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   vertical-align: middle;
   color: inherit;
   font: inherit;
@@ -519,12 +525,14 @@ textarea {
  */
 [type=checkbox] {
   -webkit-appearance: checkbox;
-  appearance: checkbox;
+  -moz-appearance: checkbox;
+       appearance: checkbox;
 }
 
 [type=radio] {
   -webkit-appearance: radio;
-  appearance: radio;
+  -moz-appearance: radio;
+       appearance: radio;
 }
 
 /**
@@ -705,7 +713,9 @@ hamburger.scss
 @media screen and (max-width: 750px) {
   .c-hamburger-menu__button {
     align-items: center;
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     background-color: transparent;
     border: none;
     cursor: pointer;

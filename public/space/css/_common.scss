@@ -73,6 +73,10 @@ $breakpoint: (
   font-size: min(8vw,40px);
 }
 
+@mixin font40{
+  font-size: min(7vw,40px);
+}
+
 @mixin font35{
   line-height: 1.8em;
   font-size: min(7vw,35px);
