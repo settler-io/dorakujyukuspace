@@ -1,23 +1,31 @@
 /******************************
 l-header.scss
 ******************************/
+@use "mixin" as *;
+@use "variable" as *;
+@use "common" as *;
+
 .l-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 99;
+
+  // position: fixed;
+
+  
 
   &__inner {
-    padding: 1rem 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
     @include flex-all {
       gap: 5%;
+      
     }
   }
 
   &__logo {
-    @include mq(md) {
-      flex: 1 1 pcWidth(253);
-    }
+    width: 200px;
+    // @include mq(md) {
+    //   flex: 1 1 pcWidth(253);
+    // }
 
     @include mq(sm-md) {
       flex: 0 1 70%;
@@ -25,9 +33,9 @@ l-header.scss
   }
 
   &-nav {
-    @include mq(md) {
-      flex: 5 1 pcWidth(493);
-    }
+    // @include mq(md) {
+    //   flex: 1 1 pcWidth(493);
+    // }
 
     @include mq(sm-md) {
       flex: 0 1 50px;
@@ -39,7 +47,7 @@ l-header.scss
         top: 0;
         right: -300px;
         width: 300px;
-        // height: 100vh;
+        height: 100vh;
         background-color: $c-white;
         transition: right 0.5s ease-in-out;
         z-index: 99;

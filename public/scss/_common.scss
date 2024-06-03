@@ -1,0 +1,93 @@
+/******************************
+common.scss
+******************************/
+
+@use "mixin" as *;
+@use "variable" as *;
+
+
+/******************************
+width.scss
+******************************/
+.c-inner {
+  width: min($SP-inner * 1%, $PC-inner * 1px);
+  margin: 0 auto;
+}
+
+
+/******************************
+display.scss
+******************************/
+.pc-only {
+  display: none;
+
+  @include mq(md) {
+    display: block;
+  }
+}
+
+.sp-only {
+  display: none;
+
+  @include mq(sm-md) {
+    display: block;
+  }
+}
+
+/******************************
+button.scss
+******************************/
+
+.c-button {
+  display: block;
+  margin: 0 auto;
+  line-height: 2.5;
+  background-color: #005be1;
+  color: $c-white;
+  text-align: center;
+  font-weight: 700;
+
+  @include mq(md) {
+    border-radius: 0.5em;
+  }
+  @include mq(sm-md) {
+    border-radius: 1em;
+  }
+}
+
+/******************************
+text.scss
+******************************/
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-main {
+  color: $c-main;
+}
+
+.text-sub {
+  color: $c-sub;
+}
+
+.text-point {
+  color: $c-point;
+  font-weight: 700;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+

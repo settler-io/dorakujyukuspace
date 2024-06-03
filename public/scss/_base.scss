@@ -1,6 +1,8 @@
 /******************************
 base.scss
 ******************************/
+@use "mixin" as *;
+@use "variable" as *;
 
 html {
   font-size: 12px;
@@ -22,11 +24,19 @@ html {
   }
 }
 
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+
 body {
   overflow-x: hidden;
   width: 100%;
   color: $c-black;
-  @include sans-serif;
+  @include murecho-regular;
 }
 
 img {

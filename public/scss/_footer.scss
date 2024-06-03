@@ -1,6 +1,9 @@
 /******************************
 footer.scss
 ******************************/
+@use "mixin" as *;
+@use "variable" as *;
+
 .p-footer {
   background-color: #dbdbdb;
 

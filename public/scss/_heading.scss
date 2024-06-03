@@ -1,6 +1,8 @@
 /******************************
 heading.scss
 ******************************/
+@use "mixin" as *;
+
 .c-hd-lv2 {
   position: relative;
   text-align: center;

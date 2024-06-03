@@ -1,6 +1,9 @@
 /******************************
 main.scss
 ******************************/
+@use "mixin" as *;
+@use "variable" as *;
+
 .p-MV {
   background-color: #f3f3f3;
 
