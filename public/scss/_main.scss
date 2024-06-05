@@ -5,10 +5,12 @@ main.scss
 @use "variable" as *;
 
 .p-MV {
-  background-color: #f3f3f3;
+  // background-color: #f3f3f3;
+  background: linear-gradient(0deg, rgba(201, 232, 255, 0.6), rgba(230, 245, 255, 0.5)) ,url(../images/mv_bg.png) no-repeat top;
+  
 
   &__h1 {
-    color: $c-point;
+    // color: $c-point;
     @include pcFont(49);
     @include spFont(21);
     font-weight: 700;
@@ -29,48 +31,11 @@ main.scss
     @include pcFont(30);
     @include spFont(14);
     letter-spacing: 0.05em;
+    font-weight: 900;
   }
 }
 
-.p-image {
-  background-color: #fffbfb;
-  &__h3 {
-    @include pcFont(30);
-    @include spFont(16);
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: pcWidth(100);
 
-    span {
-      color: #fe8383;
-    }
-  }
-
-  &__item {
-    &::before {
-      display: block;
-      content: attr(data-number);
-      line-height: 1;
-      background-color: #fe8383;
-      border-radius: 50%;
-      color: $c-white;
-      @include flex-all($j: center);
-      @include pcFont(38);
-      @include spFont(38);
-
-      @include mq(md) {
-        width: 2em;
-        height: 2em;
-        @include ab($t: -1em, $l: -0.5em);
-      }
-      @include mq(sm-md) {
-        width: 1.2em;
-        height: 1.2em;
-        @include ab($t: -0.5em, $l: -0.25em);
-      }
-    }
-  }
-}
 .p-merit {
   &__no {
     color: #fe8383;
@@ -78,7 +43,7 @@ main.scss
     @include spFont(30);
     margin-bottom: pcWidth(20);
 
-    @include mq(sm-md) {
+    @include mq(medium) {
       text-align: center;
     }
   }
@@ -91,7 +56,7 @@ main.scss
       margin-bottom: pcWidth(30);
     }
 
-    @include mq(sm-md) {
+    @include mq(medium) {
       text-align: center;
       margin-bottom: spWidth(38);
     }
@@ -113,7 +78,7 @@ main.scss
     @include pcFont(30);
     @include spFont(16);
 
-    @include mq(sm-md) {
+    @include mq(medium) {
       text-align: center;
     }
   }
@@ -123,60 +88,6 @@ main.scss
   }
 }
 
-.p-campaign {
-  background-color: #c9eafc;
-
-  &::before {
-    display: block;
-    content: "";
-    height: 0;
-    background: url("../images/campaign_icon.png") no-repeat top/contain;
-    @include mq(md) {
-      width: 30%;
-      padding-bottom: calc(30% / 431 * 363);
-      @include ab($t: 19%, $r: 74%);
-    }
-    @include mq(sm-md) {
-      width: spWidth(412);
-      padding-bottom: calc(spWidth(412) / 431 * 363);
-      @include ab($b: 0, $r: 5%);
-    }
-    @include mq(xl) {
-      width: 431px;
-      padding-bottom: 363px;
-      right: 70%;
-    }
-  }
-
-  &__h2 {
-    color: $c-white;
-    line-height: 1.6;
-    text-align: center;
-    background: url("../images/campaign_heading.png") no-repeat top/contain;
-    @include pcFont(49);
-    @include spFont(22);
-  }
-  &__catch {
-    text-align: center;
-    font-weight: 700;
-    color: #ff5656;
-    @include pcFont(50);
-    @include spFont(18);
-  }
-  &__text {
-    text-align: center;
-    @include pcFont(35);
-    @include spFont(16);
-
-    span {
-      color: #fb7800;
-    }
-  }
-  &__button {
-    @include pcFont(37);
-    @include spFont(22);
-  }
-}
 .p-contact {
   &__text {
     @include pcFont(30);
@@ -186,7 +97,7 @@ main.scss
       color: #ff5757;
     }
 
-    @include mq(sm-md) {
+    @include mq(medium) {
       text-align: center;
     }
   }
@@ -228,3 +139,204 @@ main.scss
     @include spFont(22);
   }
 }
+
+/******************************
+mv
+******************************/
+// main {
+// }
+.inner {
+  padding-top: pcWidth(40);
+  width: min($SP-inner * 1%, $PC-inner * 1px);
+  margin: 0 auto;
+  @include flex-md;
+
+    &__button {
+      @include pcFont(37);
+      @include spFont(22);
+    
+
+    @include mq(md) {
+      margin: auto;
+      width: 40%;
+    }
+
+    @include mq(medium) {
+      width: 100%;
+      margin-bottom: spWidth(50);
+    }
+  }
+}
+    
+.mv {
+
+  @include mq(medium) {
+    font-size: 30px;
+  }
+  word-break:keep-all;
+  
+  
+  .figure {
+    overflow-y: hidden;
+    margin-right: pcWidth(20);
+    // transform: rotate( 10deg );
+    // padding-top: 5vh;
+
+    @include mq(md) {
+      flex: 0 1 pcWidth(445);
+      aspect-ratio: 345/605;
+      
+    }
+
+    @include mq(medium) {
+      margin-top: -3vh;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      aspect-ratio: 286/367;
+    }
+  }
+  
+  // width: min(100%, 1200px);
+  background: linear-gradient(0deg, rgba(201, 232, 255, 0.6), rgba(230, 245, 255, 0.5)) ,url(../images/mv_bg.png) no-repeat top;
+  padding-top: 70px;
+
+  // @include flex-md;
+  // @include flex-all;
+  
+  &__h1 {
+    // color: $c-point;
+    @include pcFont(49);
+    @include spFont(35);
+    font-weight: 700;
+    font-feature-settings: "palt";
+    letter-spacing: 0.05em;
+    
+    @include mq(medium) {
+      margin: pcWidth(50) 0 pcWidth(100);
+      line-height: 1.2em;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    @include pcFont(30);
+    @include spFont(14);
+    letter-spacing: 0.05em;
+    font-weight: 900;
+    
+      @include mq(md) {
+        margin: pcWidth(50) 0 pcWidth(100);
+        
+      }
+  
+      @include mq(medium) {
+        margin: spWidth(30) auto;
+        text-align: center;
+      }
+    
+  }
+  .line_a{
+    height: 5px;
+    background-color: #E90000;
+    width: 100%;
+  }
+  
+  .line_b{
+    height: 5px;
+    background-color: #006DC3;
+    width: 100%;
+  }
+}
+
+/******************************
+ご利用イメージ
+******************************/
+
+.use {
+  background-color: #fffbfb;
+  
+  &__title {
+    padding: 5vh 0 0.5vh;
+    position: relative;
+    text-align: center;
+    font-weight: 700;
+    @include pcFont(60);
+    @include spFont(35);
+    letter-spacing: 0.1em;
+  }
+
+  h3 {
+    position: relative;
+    // padding: 0 65px;
+    // text-align: center;
+
+    @include pcFont(40);
+    @include spFont(20);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: pcWidth(100);
+    
+    &::before {
+      position: absolute;
+      top: 60%;
+      left: 20%;
+      width: 60%;
+
+      @include mq(medium){
+        left: 5%;
+        width: 90%;
+      }
+      height: 5px;
+      content: '';
+      background: #E90000;
+    }
+    .h3_text {
+      position: relative;
+      padding: 0 0.5em;
+      background: #fff;
+      white-space: nowrap;
+      letter-spacing: 0.1em;
+    
+      .small_font{
+        font-size: 0.8em;
+      }
+      
+      .large_font{
+        font-size: 1.5em;
+      }
+
+      .bold{
+        color: #E90000;
+      }
+    }
+    
+  }
+}
+
+.l-use {
+  @include mq(md) {
+    padding: pcWidth(30) 0 pcWidth(80);
+  }
+
+  @include mq(medium) {
+    padding: spWidth(30) 0 spWidth(72);
+  }
+
+  &__list {
+    @include flex-md;
+  }
+
+  &__item {
+    position: relative;
+    flex: 0 1 30%;
+
+    @include mq(medium) {
+      &:not(:last-of-type) {
+        margin-bottom: spWidth(60);
+      }
+    }
+  }
+}
+
+

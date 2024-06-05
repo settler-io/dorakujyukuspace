@@ -15,7 +15,7 @@ footer.scss
         border-right: 1px solid $c-black;
       }
     }
-    @include mq(sm-md) {
+    @include mq(medium) {
       margin-bottom: spWidth(20);
     }
   }

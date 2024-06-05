@@ -14,12 +14,12 @@ header.scss
       @include mq(md) {
         font-size: 16px;
       }
-      @include mq(sm-md) {
+      @include mq(medium) {
         font-size: 16px;
       }
     }
     &__item {
-      @include mq(sm-md) {
+      @include mq(medium) {
         line-height: 3;
         border-bottom: 1px solid #000000;
       }
@@ -32,7 +32,7 @@ header.scss
 }
 
 .p-hamburger {
-  @include mq(sm-md) {
+  @include mq(medium) {
     cursor: pointer;
   }
 
@@ -46,3 +46,10 @@ header.scss
     }
   }
 }
+
+.x_logo img{
+  padding: 1vh 0;
+  @include mq(medium) {
+    width: 26px;
+  }
+  }

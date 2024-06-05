@@ -13,6 +13,24 @@
   }
 }
 
+$breakpoint: (
+  "sm": "screen and (min-width: 450px)",
+  "md": "screen and (min-width: 768px)",
+  "lg": "screen and (min-width: 1024px)",
+  "xl": "screen and (min-width: 1440px)",
+  
+  "small": "screen and (max-width: 450px)",
+  "medium": "screen and (max-width: 767.98px)",
+  "large": "screen and (min-width: 769px)",
+
+  // "sm-only": "screen and (max-width: 425.98px)",
+  // "md-only": "screen and (min-width: 426px) and ( max-width:1023.98px)",
+  // "lg-only": "screen and (min-width: 1024px) and ( max-width:1439.98px)",
+  // "medium": "screen and (max-width: 767.98px)",
+) !default;
+
+
+
 // ******************************
 // flex
 // ******************************
@@ -130,7 +148,7 @@
   @return calc($fz/$SP-width * 100vw);
 }
 
-@mixin spFont($fz: 16, $bp: "sm-md") {
+@mixin spFont($fz: 16, $bp: "medium") {
   @include mq($bp) {
     font-size: font_vw_sp($fz);
   }
