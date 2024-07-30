@@ -43,6 +43,9 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;500;600;700;900&display=swap"
       rel="stylesheet"
     />
+
+    <link href="https://fonts.googleapis.com/css2?family=Murecho:wght@200;400;600;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="/favicon.ico" />
     <script
@@ -64,10 +67,11 @@
       ></iframe
     ></noscript>
     <header class="l-header p-header">
-      <div class="l-header__inner p-header__inner c-inner">
+      <!-- <div class="l-header__inner p-header__inner c-inner"> -->
+        <div class="l-header__inner">
         <div class="l-header__logo p-header__logo">
           <a href="">
-            <img src="images/logo.png" alt="" />
+            <img src="images/logo.svg" alt="" />
           </a>
         </div>
         <div class="l-header-nav p-header-nav">
@@ -78,9 +82,13 @@
           </div>
           <nav
             id="header-nav"
-            class="l-header-nav__wrapper p-header-nav__wrapper"
-          >
+            class="l-header-nav__wrapper p-header-nav__wrapper">
             <ul class="l-header-nav__list p-header-nav__list">
+
+              <li class="l-header-nav__item p-header-nav__item x_logo">
+                <a href="https://twitter.com/torecaswap" class="l-header-nav__link p-header-nav__link" target="_blank" rel="noopener noreferrer"><img src="images/x_logo.svg" alt="PC de ボドゲ X"></a>
+              </li>
+
               <li class="l-header-nav__item p-header-nav__item">
                 <a
                   class="l-header-nav__link p-header-nav__link"
@@ -90,16 +98,24 @@
                   >フリマ</a
                 >
               </li>
-              <!--<li class="l-header-nav__item p-header-nav__item">
-              <a class="l-header-nav__link p-header-nav__link" href="#campaign">キャンペーン</a>
-            </li>-->
+
               <li class="l-header-nav__item p-header-nav__item">
                 <a
                   class="l-header-nav__link p-header-nav__link"
-                  href="https://support.settler.cc/hc/ja/categories/8291866436879-%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B"
+                  href="https://torecaswap.com/space/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >お知らせ</a
+                  >店舗</a
+                >
+              </li>
+              
+              <li class="l-header-nav__item p-header-nav__item">
+                <a
+                  class="l-header-nav__link p-header-nav__link"
+                  href="https://media.torecaswap.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >メディア</a
                 >
               </li>
               <li class="l-header-nav__item p-header-nav__item">
@@ -108,131 +124,106 @@
                   href="https://support.settler.cc/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >サポート・お問合せ</a
+                  >お問合せ</a
                 >
               </li>
             </ul>
           </nav>
         </div>
-        <p class="l-header__button pc-only">
+      </div>
+
+      <div class="line_a"></div>
+    </header>
+
+
+
+    <!-- <div id="hamburger-bg" class="l-hamburger__bg p-hamburger__bg"></div> -->
+
+
+    <!-- <main class="l-main p-main"> -->
+    <main>
+    <section class="mv">
+    
+      <div class="inner">
+        <div>
+        <h1 class="mv__h1">トレカ専門フリマ<wbr>「トレカスワップ」</h1>
+        <p class="mv__text">
+          トレカスワップはトレカをお預かりすることで<wbr>
+          圧倒的に楽なWEB上でのトレカ売買環境を<wbr>提供します。<br />
+          ご購入したトレカは出品するだけでなく<br
+            class="sp-only"
+          />引出す事も可能です。
+        </p>
+        <p class="inner__button">
           <a
-            class="c-button"
+            class="start-button"
             href="https://app.torecaswap.com/"
             target="_blank"
             rel="noopener noreferrer"
             >ご利用を開始する</a
           >
         </p>
+        </div>
+    
+      <figure class="figure">
+        <img
+        
+          src="images/MV_img.png"
+          alt=""
+          loading="lazy"
+        />
+      </figure>
       </div>
-    </header>
-    <div id="hamburger-bg" class="l-hamburger__bg p-hamburger__bg"></div>
-    <main class="l-main p-main">
-      <section id="MV" class="l-MV p-MV">
-        <div class="l-MV__inner c-inner">
-          <div class="l-MV__contents p-MV__contents">
-            <div class="l-MV__txt p-MV__txt">
-              <div class="c-hd l-MV__headding p-MV__headding">
-                <h1 class="l-MV__h1 p-MV__h1">
-                  トレカ専門フリマ「トレカスワップ」
-                </h1>
-                <p class="l-MV__text p-MV__text">
-                  トレカスワップはトレカをお預かりすることで<br />
-                  圧倒的に楽なWEB上でのトレカ売買環境を提供します。<br />
-                  ご購入したトレカは出品するだけでなく<br
-                    class="sp-only"
-                  />引出す事も可能です。
-                </p>
-                <p class="l-MV__button p-MV__button">
-                  <a
-                    class="c-button"
-                    href="https://app.torecaswap.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >ご利用を開始する</a
-                  >
-                </p>
-              </div>
-            </div>
-            <figure class="l-MV__figure p-MV__figure">
-              <img
-                class="l-MV__img p-MV__img"
-                src="images/MV_img.png"
-                alt=""
-                loading="lazy"
-              />
-            </figure>
-          </div>
-        </div>
-      </section>
-      <section id="campaign" class="l-campaign p-campaign">
-        <div class="l-campaign__inner c-inner">
-          <div class="l-campaign__contents p-campaign__contents">
-            <div class="c-hd l-campaign__headding p-campaign__headding">
-              <h2 class="l-campaign__h2 p-campaign__h2">
-                只今キャンペーン実施中！
-              </h2>
-            </div>
-            <p class="l-campaign__catch p-campaign__catch">
-              本人確認でポイントゲット！
-            </p>
-            <p class="l-campaign__text p-campaign__text">
-              2024年2月中までに本人確認をすれば1000円分の<br />
-              トレカスワップ内ポイント付与。詳細は
-            </p>
-            <p class="l-campaign__catch p-campaign__catch">
-              <a
-                href="https://support.settler.cc/hc/ja/articles/8919877019663-%E3%83%88%E3%83%AC%E3%82%AB%E5%B0%82%E9%96%80%E5%8F%96%E5%BC%95%E6%89%80-%E3%83%88%E3%83%AC%E3%82%AB%E3%82%B9%E3%83%AF%E3%83%83%E3%83%97-%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%9A%E3%83%BC%E3%83%B3"
-                target="_blank"
-                >こちら</a
-              >
-            </p>
-            <p class="l-campaign__button p-campaign__button c-button">
-              <a
-                href="https://app.torecaswap.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >ご利用を開始する</a
-              >
-            </p>
-          </div>
-        </div>
-      </section>
-      <section id="image" class="l-image p-image">
-        <div class="l-image__inner c-inner">
-          <div class="l-image__contents p-image__contents">
-            <div class="c-hd l-image__headding p-image__headding">
-              <h2 class="c-hd-lv2 l-image__h2 p-image__h2">
+      
+      <div class="line_b"></div>
+    </section>
+    
+      
+    <section class="use">
+      <h2 class="use__title">
+        トレカスワップ<span class="small_font">の</span><br class="sp-only" />ご利用イメージ
+      </h2>
+      <h3>
+        <span class="h3_text">ご利用はカンタン<span class="large_font bold">3</span><span class="bold">STEP</span>!!</span>
+      </h3>
+    </section>
+      
+      <section id="use" class="l-use p-use">
+        <div class="l-use__inner c-inner">
+          <div class="l-use__contents p-use__contents">
+            <div class="c-hd l-use__headding p-use__headding">
+              <h2 class="c-hd-lv2 l-use__h2 p-use__h2">
                 トレカスワップの<br class="sp-only" />ご利用イメージ
               </h2>
             </div>
-            <h3 class="l-image__h3 p-image__h3">
+            <h3 class="l-use__h3 p-use__h3">
               ご利用は簡単<span>３</span>ステップ
             </h3>
-            <ul class="l-image__list p-image__list">
-              <li class="l-image__item p-image__item" data-number="1">
-                <figure class="l-image__figure p-image__figure">
+            <ul class="l-use__list p-use__list">
+              <li class="l-use__item p-use__item" data-number="1">
+                <figure class="l-use__figure p-use__figure">
                   <img
-                    class="l-image__img"
+                    class="l-use__img"
                     src="images/image_img1.png"
                     alt=""
                     loading="lazy"
                   />
                 </figure>
               </li>
-              <li class="l-image__item p-image__item" data-number="2">
-                <figure class="l-image__figure p-image__figure">
+              <li class="l-use__item p-use__item" data-number="2">
+                <figure class="l-use__figure p-use__figure">
                   <img
-                    class="l-image__img"
+                    class="l-use__img"
                     src="images/image_img2.png"
                     alt=""
                     loading="lazy"
                   />
                 </figure>
               </li>
-              <li class="l-image__item p-image__item" data-number="3">
-                <figure class="l-image__figure p-image__figure">
+              <li class="l-use__item p-use__item" data-number="3">
+                <figure class="l-use__figure p-use__figure">
                   <img
-                    class="l-image__img"
+                    class="l-use__img"
                     src="images/image_img3.png"
                     alt=""
                     loading="lazy"
@@ -421,7 +412,7 @@
           <p class="l-contact__text2 p-contact__text2">
             いつでもオンラインで売ったり買ったりできるようになります！
           </p>
-          <p class="l-contact__button p-contact__button c-button">
+          <p class="l-contact__button p-contact__button start-button">
             <a
               href="https://app.torecaswap.com/"
               target="_blank"

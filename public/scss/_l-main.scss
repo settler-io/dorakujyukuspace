@@ -1,11 +1,17 @@
 /******************************
 l-main.scss
 ******************************/
+@use "mixin" as *;
+
 .l-MV {
   padding-top: pcWidth(40);
+  // @include mq(sm) {
+  //   padding-top: pcWidth(100);
+  // }
 
   &__contents {
     @include flex-md;
+    height: 10%;
   }
 
   &__txt {
@@ -14,14 +20,15 @@ l-main.scss
 
   &__figure {
     overflow-y: hidden;
-    margin-right: pcWidth(30);
+    margin-right: pcWidth(5);
+    // transform: rotate( 10deg );
 
     @include mq(md) {
       flex: 0 1 pcWidth(345);
       aspect-ratio: 345/605;
     }
 
-    @include mq(sm-md) {
+    @include mq(medium) {
       width: 100%;
       margin-left: auto;
       margin-right: auto;
@@ -34,29 +41,30 @@ l-main.scss
       margin: pcWidth(50) 0 pcWidth(100);
     }
 
-    @include mq(sm-md) {
+    @include mq(medium) {
       margin: spWidth(30) auto;
     }
   }
 
   &__button {
     @include mq(md) {
-      width: 57%;
+      margin: auto;
+      width: 40%;
     }
 
-    @include mq(sm-md) {
+    @include mq(medium) {
       width: 100%;
       margin-bottom: spWidth(50);
     }
   }
 }
 
-.l-image {
+.l-use {
   @include mq(md) {
     padding: pcWidth(30) 0 pcWidth(80);
   }
 
-  @include mq(sm-md) {
+  @include mq(medium) {
     padding: spWidth(30) 0 spWidth(72);
   }
 
@@ -68,7 +76,7 @@ l-main.scss
     position: relative;
     flex: 0 1 30%;
 
-    @include mq(sm-md) {
+    @include mq(medium) {
       &:not(:last-of-type) {
         margin-bottom: spWidth(60);
       }
@@ -81,7 +89,7 @@ l-main.scss
     padding: pcWidth(40) 0 pcWidth(72);
   }
 
-  @include mq(sm-md) {
+  @include mq(medium) {
     padding: spWidth(30) 0 spWidth(100);
   }
 
@@ -96,7 +104,7 @@ l-main.scss
       margin-bottom: pcWidth(40);
     }
 
-    @include mq(sm-md) {
+    @include mq(medium) {
       &:not(:last-of-type) {
         margin-bottom: spWidth(75);
       }
@@ -117,7 +125,7 @@ l-main.scss
     padding: pcWidth(40) 0 pcWidth(64);
   }
 
-  @include mq(sm-md) {
+  @include mq(medium) {
     padding: spWidth(30) 0 spWidth(50);
   }
 
@@ -126,7 +134,7 @@ l-main.scss
       margin-bottom: pcWidth(54);
     }
 
-    @include mq(sm-md) {
+    @include mq(medium) {
       margin-bottom: spWidth(54);
     }
   }
@@ -140,7 +148,7 @@ l-main.scss
       padding: pcWidth(75) pcWidth(100);
     }
 
-    @include mq(sm-md) {
+    @include mq(medium) {
       padding: spWidth(36) spWidth(15);
 
       &:not(:last-of-type) {
@@ -152,7 +160,7 @@ l-main.scss
   &__figure {
     flex: 0 1 30%;
 
-    @include mq(sm-md) {
+    @include mq(medium) {
       width: 55%;
       margin: 0 auto spWidth(30);
     }
@@ -163,66 +171,13 @@ l-main.scss
   }
 }
 
-.l-campaign {
-  position: relative;
-  @include mq(md) {
-    padding: pcWidth(54) 0 pcWidth(84);
-  }
-
-  @include mq(sm-md) {
-    padding: spWidth(45) 0 spWidth(350);
-  }
-
-  &__h2 {
-    @include mq(md) {
-      width: 62%;
-      margin: 0 auto pcWidth(62);
-      padding: pcWidth(13) 0 pcWidth(56);
-    }
-
-    @include mq(sm-md) {
-      width: 100%;
-      padding: spWidth(6) 0 spWidth(26);
-    }
-  }
-
-  &__catch {
-    @include mq(md) {
-      margin-bottom: pcWidth(60);
-    }
-
-    @include mq(sm-md) {
-      margin-bottom: spWidth(33);
-    }
-  }
-  &__text {
-    @include mq(md) {
-      margin-bottom: pcWidth(60);
-    }
-
-    @include mq(sm-md) {
-      margin-bottom: spWidth(33);
-    }
-  }
-
-  &__button {
-    @include mq(md) {
-      width: pcWidth(510);
-      margin: 0 auto;
-    }
-
-    @include mq(sm-md) {
-      width: 100%;
-    }
-  }
-}
 
 .l-contact {
   @include mq(md) {
     padding: pcWidth(40) 0 pcWidth(67);
   }
 
-  @include mq(sm-md) {
+  @include mq(medium) {
     padding: spWidth(30) 0 spWidth(60);
   }
 
@@ -231,7 +186,7 @@ l-main.scss
       margin-bottom: pcWidth(30);
     }
 
-    @include mq(sm-md) {
+    @include mq(medium) {
       margin-bottom: spWidth(52);
     }
   }
@@ -245,7 +200,7 @@ l-main.scss
         margin: 0 auto pcWidth(73);
       }
 
-      @include mq(sm-md) {
+      @include mq(medium) {
         width: spWidth(272);
         padding: 0 spWidth(62) 0 spWidth(84);
         margin: 0 auto spWidth(53);
@@ -257,7 +212,7 @@ l-main.scss
       margin-bottom: pcWidth(72);
     }
 
-    @include mq(sm-md) {
+    @include mq(medium) {
       margin-bottom: spWidth(52);
     }
   }
@@ -267,7 +222,7 @@ l-main.scss
       margin: 0 auto;
     }
 
-    @include mq(sm-md) {
+    @include mq(medium) {
       width: 100%;
     }
   }

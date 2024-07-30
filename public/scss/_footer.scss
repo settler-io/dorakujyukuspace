@@ -1,6 +1,9 @@
 /******************************
 footer.scss
 ******************************/
+@use "mixin" as *;
+@use "variable" as *;
+
 .p-footer {
   background-color: #dbdbdb;
 
@@ -12,7 +15,7 @@ footer.scss
         border-right: 1px solid $c-black;
       }
     }
-    @include mq(sm-md) {
+    @include mq(medium) {
       margin-bottom: spWidth(20);
     }
   }

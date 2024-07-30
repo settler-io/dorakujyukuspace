@@ -1,12 +1,14 @@
 /******************************
 l-footer.scss
 ******************************/
+@use "mixin" as *;
+
 .l-footer {
   @include mq(md) {
     padding: pcWidth(34) 0 pcWidth(25);
   }
 
-  @include mq(sm-md) {
+  @include mq(medium) {
     padding: spWidth(42) 0 spWidth(17);
   }
   &__nav {
@@ -14,7 +16,7 @@ l-footer.scss
       margin-bottom: pcWidth(17);
     }
 
-    @include mq(sm-md) {
+    @include mq(medium) {
       margin-bottom: spWidth(90);
     }
   }
