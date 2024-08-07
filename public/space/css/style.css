@@ -348,7 +348,7 @@ category_2
 }
 .category_2__calendar_waku {
   max-width: 1000px;
-  height: 680px;
+  height: auto;
   padding: 3vh 4vh;
   margin-top: 2vh;
   text-align: center;
@@ -361,7 +361,7 @@ category_2
 @media screen and (max-width: 450px) {
   .category_2__calendar_waku {
     padding: 2vh 1.5vh;
-    height: 750px;
+    height: auto;
   }
 }
 .category_2 #calendar {

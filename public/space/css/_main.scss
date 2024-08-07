@@ -271,7 +271,8 @@ category_2
 
   &__calendar_waku {
     max-width: 1000px;
-    height: 680px;
+    // height: 680px;
+    height: auto;
     padding: 3vh 4vh;
     margin-top: 2vh;
     text-align: center;
@@ -283,7 +284,8 @@ category_2
 
     @include mq(small) {
       padding: 2vh 1.5vh;
-      height: 750px;
+      // height: 750px;
+      height: auto;
     }
   }
 
