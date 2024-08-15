@@ -50,50 +50,6 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="/favicon.ico" />
 
-    <!-- full calendar -->
-    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js'></script>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var calendarEl = document.getElementById('calendar');
-      var calendar = new FullCalendar.Calendar(calendarEl, {
-        locale: 'ja',
-        // 「日」を取る
-        dayCellContent: function(arg){
-		return arg.date.getDate();
-	},
-  // ボタン文字列の日本語化
-  buttonText: {
-    today: '今日',
-    },
-        initialView: 'dayGridMonth',
-        events:'c_1882nb2cvcodaippnjnf7aau1ku4s@resource.calendar.google.com',
-        googleCalendarApiKey: 'AIzaSyDynMXJJJzcGMukiZgoNopOoupTEfrHAFg',
-        eventSources: [
-          {
-            googleCalendarApiKey: 'AIzaSyDynMXJJJzcGMukiZgoNopOoupTEfrHAFg',
-            googleCalendarId: 'japanese__ja@holiday.calendar.google.com',
-            display: 'background',
-          }
-        ],
-        firstDay: 1,
-        eventTimeFormat: { hour: 'numeric', minute: '2-digit' },
-        eventClick: function(info) {
-            info.jsEvent.preventDefault();
-          },
-          eventDidMount: (e)=>{
-            tippy(e.el, {
-              content: e.event.title,
-            });
-          },
-      });
-      calendar.render();
-    });
-    </script>
-    <!-- full calendar -->
-
-    <script src="calendar/google-calendar/index.global.js"></script>
-    <script src="calendar/google-calendar/index.global.min.js"></script>
-
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
 
@@ -125,29 +81,22 @@
 
     <div class="wrapper">
 
-    <header class="c-header c-hamburger-menu"><!-- 追記 クラスを追記 -->
-      <a href="#" class="c-header__logo"><img style="width: 100%;" src="images/pcdebodoge_logo_black.svg" alt="" /></a>
+    <header>
+      <div class="logo_bodoge"><a href="#"><img src="images/pcdebodoge_logo_black.svg" alt="" /></a></div>
 
-      <input type="checkbox" name="hamburger" id="hamburger" class="c-hamburger-menu__input"/><!-- 追記 idはlabelのforと同じにする -->
-      <label for="hamburger" class="c-hamburger-menu__bg"></label><!-- 追記 ハンバーガーメニュを開いた時の背景 -->
-      <ul class="c-header__list c-hamburger-menu__list"><!-- 追記 クラスを追記  -->
-        <li class="c-header__list-item x_logo">
+      <ul class="header-nav">
+        <li class="x_logo">
           <a href="https://twitter.com/pcdebodoge" class="c-header__list-link" target="_blank" rel="noopener noreferrer"><img src="images/x_logo.svg" alt="PC de ボドゲ X"></a>
         </li>
       
-        <li class="c-header__list-item">
+        <li>
           <a href="https://media.torecaswap.com/" target="_blank" class="c-header__list-link" rel="noopener noreferrer">メディア</a>
         </li>
-        <li class="c-header__list-item">
+        <li>
           <a href="https://support.settler.cc/" class="c-header__list-link" target="_blank" rel="noopener noreferrer">お問合せ</a>
         </li>
 
       </ul>
-      <label for="hamburger" class="c-hamburger-menu__button"><!-- 追記 ハンバーガーメニューのボタン -->
-        <span class="c-hamburger-menu__button-mark"></span>
-        <span class="c-hamburger-menu__button-mark"></span>
-        <span class="c-hamburger-menu__button-mark"></span>
-      </label>
     </header>
 
 
@@ -269,7 +218,8 @@
     <div class="category_2__title"><img src="images/squre3.svg"><span class="title_text">営業時間</span><img src="images/squre3.svg"></div>
     <div class="category_2__waku">
       <p><span class="font35">金・土・日曜 <br>13：00 ～ 20:00</span><br></p>
-      <span class="font20">※貸切予約が入った場合にスペースが使えない場合があるので、必ず最新情報をXでチェックしてください</span>
+      <span class="font20">※貸切予約が入った場合にスペースが使えない場合があるので、<br>必ず最新情報をXでチェックしてください</span>
+      <div style="height: 10px;"></div>
       <a class="twitter-timeline" data-height="900" href="https://twitter.com/pcdebodoge?ref_src=twsrc%5Etfw">Tweets by pcdebodoge</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
   </section>
@@ -278,8 +228,8 @@
     <section class="category_2">
       <div class="category_2__title"><img src="images/squre3.svg"><span class="title_text">貸切</span><img src="images/squre3.svg"></div>
       <div class="category_2__calendar_waku">
-        <iframe src="https://calendar.google.com/calendar/embed?src=c_1882nb2cvcodaippnjnf7aau1ku4s%40resource.calendar.google.com&ctz=Asia%2FTokyo" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-        <a href="https://calendar.google.com/calendar/embed?src=c_1882nb2cvcodaippnjnf7aau1ku4s%40resource.calendar.google.com&ctz=Asia%2FTokyo" target="_blank"><p style="line-height: 30px; text-decoration: underline;">PC de ボドゲ <wbr>貸切状況を見る<span style="font-size: 70%;"><br>(googleカレンダー)</span></p></a>
+        <iframe src="https://calendar.google.com/calendar/embed?src=c_1882nb2cvcodaippnjnf7aau1ku4s%40resource.calendar.google.com&ctz=Asia%2FTokyo" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+        <!-- <a href="https://calendar.google.com/calendar/embed?src=c_1882nb2cvcodaippnjnf7aau1ku4s%40resource.calendar.google.com&ctz=Asia%2FTokyo" target="_blank"><p style="line-height: 30px; text-decoration: underline;">PC de ボドゲ <wbr>貸切状況を見る<span style="font-size: 70%;"><br>(googleカレンダー)</span></p></a> -->
           
           <div style="height: 20px;"></div>
           <div><a href="https://www.instabase.jp/space/8957169051" target="_blank"><img style="margin-top: 2px;" height="22px" style="display: inline-block;" src="images/instabase_logo.jpg"> <span style="display: inline-block; vertical-align: top; padding: 0;">instabaseで予約する</span></a></div>
@@ -287,9 +237,6 @@
           <div><a href="https://www.spacee.jp/listings/42918" target="_blank"><img style="margin-top: 2px;" height="22px" style="display: inline-block;" src="images/spacee_logo.svg"> <span style="display: inline-block; vertical-align: top; padding: 0;">SPACEEで予約する</span></a></div>
           <div style="height: 10px;"></div>
           
-          <!-- <iframe src="https://calendar.google.com/calendar/embed?src=c_1882nb2cvcodaippnjnf7aau1ku4s%40resource.calendar.google.com&ctz=Asia%2FTokyo&bgcolor=%23e3e9ff&showTabs=0&showTz=0" style="border:none;" width="800" height="600" frameborder="0" scrolling="no"></iframe> -->
-        
-          <!-- <div id="calendar"></div> -->
       </div>
       
       

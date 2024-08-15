@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /******************************
 base.scss
 ******************************/
@@ -77,22 +76,44 @@ body a {
 /******************************
 header.scss
 ******************************/
-.c-header,
-.c-hamburger-menu {
+header {
   position: sticky;
   top: 0;
-  width: 100%;
   z-index: 99;
-  height: 60px;
-  background-color: #fff;
-  border-bottom: solid 5px #814D00;
-}
-
-.logo {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5vh 2vw 0;
+  flex-wrap: wrap;
+  height: 55px;
+  background-color: #eeeeee;
+  border-bottom: solid 5px #814D00;
+  padding: 0 2vw;
+}
+@media screen and (max-width: 503px) {
+  header {
+    justify-content: center;
+    height: 85px;
+  }
+}
+
+.logo_bodoge {
+  padding-top: 1vh;
+}
+.logo_bodoge img {
+  width: 256px;
+}
+
+.header-nav {
+  font-size: min(5vw, 18px);
+  margin-top: 1vh;
+  font-size: 18px;
+  display: flex;
+  gap: min(3vh, 20px);
+}
+@media screen and (max-width: 503px) {
+  .header-nav {
+    margin-top: -1vh;
+  }
 }
 
 .x_logo {
@@ -337,9 +358,9 @@ category_2
   background-color: #E4D9CF;
   word-break: break-all;
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 420px) {
   .category_2__waku {
-    padding: 2vh 1.5vh;
+    padding: 2vh 5px;
   }
 }
 .category_2__layout_left {
@@ -360,7 +381,7 @@ category_2
 }
 @media screen and (max-width: 450px) {
   .category_2__calendar_waku {
-    padding: 2vh 1.5vh;
+    padding: 2vh 5px;
     height: auto;
   }
 }
@@ -575,13 +596,6 @@ button:disabled,
   font: inherit; /* 2 */
 }
 
-/**
- * Clickable labels
- */
-label[for] {
-  cursor: pointer;
-}
-
 /******************************
 footer
 ******************************/
@@ -612,132 +626,6 @@ footer ul li {
   white-space: no-wrap;
 }
 
-/******************************
-hamburger.scss
-******************************/
-.c-header {
-  align-items: center;
-  background-color: #eeeeee; /* カスタマイズしてください */
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem; /* カスタマイズしてください */
-  width: 100%;
-  font-size: min(6vw, 20px);
-}
-
-.c-header__logo {
-  color: #000; /* カスタマイズしてください */
-  min-width: 80px; /* カスタマイズしてください */
-  text-decoration: none;
-  padding: 1.5vh 0vw 0;
-}
-
-.c-header__list {
-  box-sizing: border-box;
-  display: flex;
-  margin: 0;
-  padding: 0;
-  margin-top: 0.2vh;
-}
-
-.c-header__list-item {
-  list-style: none;
-  text-decoration: none;
-}
-
-.c-header__list-link {
-  color: #000; /* カスタマイズしてください */
-  display: block;
-  margin-right: 20px; /* カスタマイズしてください */
-  text-decoration: none;
-  padding: 10px 0px; /* カスタマイズしてください */
-}
-
-.c-header__list-link:hover {
-  filter: opacity(0.6); /* カスタマイズしてください */
-}
-
-@media screen and (max-width: 750px) {
-  .c-hamburger-menu__list {
-    background-color: #eeeeee; /* カスタマイズしてください */
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    left: 0;
-    padding: 2rem; /* カスタマイズしてください */
-    position: absolute;
-    transform: translateX(100%);
-    transition: 0.3s; /* カスタマイズしてください */
-    top: 100%;
-    width: 100%;
-  }
-  #hamburger:checked ~ .c-hamburger-menu__list {
-    transform: translateX(0%);
-    transition: 0.3s;
-  }
-}
-.c-hamburger-menu__input {
-  display: none;
-}
-
-.c-hamburger-menu__bg {
-  background-color: #000; /* カスタマイズしてください */
-  cursor: pointer;
-  display: none;
-  height: 100vh;
-  left: 0;
-  opacity: 0.4; /* カスタマイズしてください */
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: -1;
-}
-
-#hamburger:checked ~ .c-hamburger-menu__bg {
-  display: block;
-}
-
-.c-hamburger-menu__button {
-  display: none;
-}
-
-@media screen and (max-width: 750px) {
-  .c-hamburger-menu__button {
-    align-items: center;
-    appearance: none;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    gap: 5px; /* カスタマイズしてください */
-    height: 32px; /* カスタマイズしてください */
-    justify-content: center;
-    width: 32px; /* カスタマイズしてください */
-  }
-}
-.c-hamburger-menu__button-mark {
-  background-color: #000; /* カスタマイズしてください */
-  display: block;
-  height: 1px; /* カスタマイズしてください */
-  transition: 0.3s; /* カスタマイズしてください */
-  width: 20px; /* カスタマイズしてください */
-}
-
-@media screen and (max-width: 750px) {
-  #hamburger:checked ~ .c-hamburger-menu__button .c-hamburger-menu__button-mark:nth-of-type(1) {
-    transform: translate(2px, 1px) rotate(45deg); /* カスタマイズしてください */
-    transform-origin: 0%; /* カスタマイズしてください */
-  }
-  #hamburger:checked ~ .c-hamburger-menu__button .c-hamburger-menu__button-mark:nth-of-type(2) {
-    opacity: 0;
-  }
-  #hamburger:checked ~ .c-hamburger-menu__button .c-hamburger-menu__button-mark:nth-of-type(3) {
-    transform: translate(2px, 3px) rotate(-45deg); /* カスタマイズしてください */
-    transform-origin: 0%; /* カスタマイズしてください */
-  }
-}
 /******************************
 calender.scss
 ******************************/

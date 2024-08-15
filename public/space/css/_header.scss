@@ -4,34 +4,45 @@ header.scss
 ******************************/
 @use "common" as *;
 
-.c-header,
-.c-hamburger-menu {
+header{
   position: sticky;
   top: 0;
-  width: 100%;
   z-index: 99;
-  height: 60px;
-  background-color: #fff;
-  border-bottom: solid 5px#814D00;
-}
-.logo{
-  // padding-top: 1vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5vh 2vw 0;
+  flex-wrap: wrap;
+  height: 55px;
+  background-color: #eeeeee;
+  border-bottom: solid 5px #814D00;
+  padding: 0 2vw;
+
+  @media screen and (max-width: 503px) {
+    justify-content: center;
+    height: 85px;
+  }
 }
 
-// #header-nav{
-//   @include font18;
-//   // margin-top: -1vh;
+.logo_bodoge{
+  padding-top: 1vh;
+
+  img{
+    width: 256px;
+  }
+}
+
+.header-nav {
+  @include font18;
+  margin-top: 1vh;
+  font-size: 18px;
   
-//   ul{
-//   display: flex;
-//   gap: min(1vw,20px);
-  
-//   }
-// }
+  display: flex;
+  gap: min(3vh,20px);
+  @media screen and (max-width: 503px) {
+    margin-top: -1vh;
+  }
+
+}
 .x_logo{
   padding-top: 0.5vh;
   }

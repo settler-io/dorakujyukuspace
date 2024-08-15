@@ -257,8 +257,8 @@ category_2
     background-color: #E4D9CF;
     word-break:break-all;
 
-    @media screen and (max-width: 350px) {
-      padding: 2vh 1.5vh;
+    @media screen and (max-width: 420px) {
+      padding: 2vh 5px;
     }
   }
 
@@ -283,7 +283,7 @@ category_2
     word-break: keep-all;
 
     @include mq(small) {
-      padding: 2vh 1.5vh;
+      padding: 2vh 5px;
       // height: 750px;
       height: auto;
     }
