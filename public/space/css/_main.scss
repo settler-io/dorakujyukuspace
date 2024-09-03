@@ -64,7 +64,7 @@ main.scss
     text-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);
 
     @include mq(small) {
-      padding-top: 170px;
+      padding-top: 160px;
       text-shadow: 1px 3px 3px rgba(0, 0, 0, 5);
     }
   }
@@ -87,7 +87,7 @@ main.scss
       &_large_sp {
         font-size: min(2em,50px);
         line-height: 1.2em;
-        padding-top: 0.3em;
+        padding-top: 0em;
 
         @include mq(large) {
           display: none;
@@ -101,9 +101,13 @@ main.scss
 }
 
 @media screen and (max-width: 816px) {
-  .mv h1 {line-height: 1.1em;}
+  .mv h1 {line-height: 1.5em;}
   }
 
+  @media screen and (max-width: 480px) {
+    .mv h1 {line-height: 1.2em;}
+    }
+  
 
 /******************************
 contents
@@ -300,7 +304,7 @@ shop
 ******************************/
 
 .shop{
-  width: 95%;
+  width: 90%;
   margin: auto;
   text-align: center;
   word-break: keep-all;
@@ -311,15 +315,24 @@ shop
     flex-wrap: wrap;
   display: flex;
   justify-content: center;
-  column-gap: 1vw;
+  column-gap: 0.5vw;
   }
 
   .image_3d img{
     border: solid 2px #FBBF66;
     box-shadow: 0 0 5px #7a5216;
-    display: inline-block;
     margin-bottom: 1vh;
+    width: 280px;
+    // width: min(70%,600px);
+    margin: 1vh;
+
+    @include mq(small) {
+      width: 180px;
+    }
   }
+
+
+
 }
 
 

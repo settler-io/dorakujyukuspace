@@ -57,6 +57,7 @@ base.scss
 
 html {
   background-color: #dfc4aa;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -185,7 +186,7 @@ main.scss
 }
 @media screen and (max-width: 450px) {
   .mv .text_area {
-    padding-top: 170px;
+    padding-top: 160px;
     text-shadow: 1px 3px 3px rgb(0, 0, 0);
   }
 }
@@ -207,7 +208,7 @@ main.scss
 .mv .catch_large_sp {
   font-size: min(2em, 50px);
   line-height: 1.2em;
-  padding-top: 0.3em;
+  padding-top: 0em;
 }
 @media screen and (min-width: 769px) {
   .mv .catch_large_sp {
@@ -222,7 +223,12 @@ main.scss
 
 @media screen and (max-width: 816px) {
   .mv h1 {
-    line-height: 1.1em;
+    line-height: 1.5em;
+  }
+}
+@media screen and (max-width: 480px) {
+  .mv h1 {
+    line-height: 1.2em;
   }
 }
 /******************************
@@ -393,7 +399,7 @@ category_2
 shop
 ******************************/
 .shop {
-  width: 95%;
+  width: 90%;
   margin: auto;
   text-align: center;
   word-break: keep-all;
@@ -404,13 +410,19 @@ shop
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
-  column-gap: 1vw;
+  column-gap: 0.5vw;
 }
 .shop .image_3d img {
   border: solid 2px #FBBF66;
   box-shadow: 0 0 5px #7a5216;
-  display: inline-block;
   margin-bottom: 1vh;
+  width: 280px;
+  margin: 1vh;
+}
+@media screen and (max-width: 450px) {
+  .shop .image_3d img {
+    width: 180px;
+  }
 }
 
 /******************************
