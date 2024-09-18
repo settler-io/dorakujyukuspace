@@ -42,10 +42,11 @@ main.scss
 
   @include mq(small) {
     background: url(../images/space_mv_sp.jpg) no-repeat;
-    background-size:cover;
-    background-position: top;
+    background-size:100%;
+    background-position: center;
     width: 95%;
-    height: 450px;
+    height: 190px;
+    // height: 450px;
   }
 
   h1{
