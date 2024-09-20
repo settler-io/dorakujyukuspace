@@ -4,8 +4,9 @@ footer
 @use "common" as *;
 
 footer{
-  @include murecho-bold;
-  font-size: 14px;
+  // @include murecho-bold;
+  @include kaisei_opti_bold;
+  font-size: 16px;
   font-weight:  600;
   width: 100%;
   text-align: center;

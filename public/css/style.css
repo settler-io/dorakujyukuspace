@@ -171,25 +171,6 @@ main.scss
     height: 190px;
   }
 }
-.mv h1 {
-  word-break: keep-all;
-  font-size: min(8vw, 35px);
-  line-height: 1.5em;
-  letter-spacing: 0.1em;
-  padding-right: 0em;
-}
-.mv .text_area {
-  padding-top: min(1vw, 40px);
-  padding-left: min(2vw, 70px);
-  background-color: "#dbdbdb";
-  text-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);
-}
-@media screen and (max-width: 450px) {
-  .mv .text_area {
-    padding-top: 160px;
-    text-shadow: 1px 3px 3px rgb(0, 0, 0);
-  }
-}
 .mv .catch {
   font-size: min(6vw, 30px);
   line-height: 1.8em;
@@ -221,14 +202,31 @@ main.scss
   }
 }
 
+.text_area {
+  margin-top: -40px;
+  margin-bottom: 20px;
+  background-color: "#dbdbdb";
+}
+
+h1 {
+  text-align: center;
+  margin: auto;
+  word-break: keep-all;
+  font-size: 3vh;
+  line-height: 1.5em;
+}
+
 @media screen and (max-width: 816px) {
-  .mv h1 {
+  h1 {
     line-height: 1.5em;
+    font-size: 2.5vh;
   }
 }
 @media screen and (max-width: 480px) {
-  .mv h1 {
+  h1 {
     line-height: 1.2em;
+    font-size: 2.5vh;
+    padding-top: 10px;
   }
 }
 /******************************
@@ -612,9 +610,10 @@ button:disabled,
 footer
 ******************************/
 footer {
-  font-family: "Murecho", sans-serif;
-  font-weight: 900;
-  font-size: 14px;
+  font-family: "Kaisei Opti", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
   font-weight: 600;
   width: 100%;
   text-align: center;

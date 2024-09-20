@@ -49,26 +49,26 @@ main.scss
     // height: 450px;
   }
 
-  h1{
-    // font-feature-settings: "palt";
-    word-break: keep-all;
-    font-size: min(8vw,35px);
-    line-height: 1.5em;
-    letter-spacing: 0.1em;
-    padding-right: 0em;
-    }
+  // h1{
+  //   font-feature-settings: "palt";
+  //   word-break: keep-all;
+  //   font-size: min(8vw,35px);
+  //   line-height: 1.5em;
+  //   letter-spacing: 0.1em;
+  //   padding-right: 0em;
+  //   }
 
-  .text_area{
-    padding-top: min(1vw,40px);
-    padding-left: min(2vw,70px);
-    background-color:"#dbdbdb";
-    text-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);
+  // .text_area{
+  //   padding-top: min(1vw,40px);
+  //   padding-left: min(2vw,70px);
+  //   background-color:"#dbdbdb";
+  //   text-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);
 
-    @include mq(small) {
-      padding-top: 160px;
-      text-shadow: 1px 3px 3px rgba(0, 0, 0, 5);
-    }
-  }
+  //   @include mq(small) {
+  //     padding-top: 160px;
+  //     text-shadow: 1px 3px 3px rgba(0, 0, 0, 5);
+  //   }
+  // }
 
   .catch{
     font-size: min(6vw,30px);
@@ -101,12 +101,29 @@ main.scss
   }
 }
 
+
+.text_area{
+  margin-top: -40px;
+  margin-bottom: 20px;
+  
+  background-color:"#dbdbdb";
+
+}
+h1{
+  text-align: center;
+  margin: auto;
+  word-break:keep-all;
+  font-size: 3vh;
+  line-height: 1.5em;
+  }
+
+
 @media screen and (max-width: 816px) {
-  .mv h1 {line-height: 1.5em;}
+  h1 {line-height: 1.5em; font-size: 2.5vh;}
   }
 
   @media screen and (max-width: 480px) {
-    .mv h1 {line-height: 1.2em;}
+    h1 {line-height: 1.2em; font-size: 2.5vh; padding-top: 10px;}
     }
   
 
