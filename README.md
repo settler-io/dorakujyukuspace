@@ -1,6 +1,6 @@
 # torecaswap-website
 
-https://torecaswap.com/ で公開されているWebサイト。
+https://space.dorakujyuku.com で公開されているWebサイト。
 
 ## 構成
 
